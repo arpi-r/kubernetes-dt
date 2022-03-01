@@ -2,7 +2,7 @@
 Digital Twinning Framework for Kubernetes
 
 This repo contains a git submodule: abs-k8s-model. To clone this repo:
-`git clone --recurse-submodules`.
+`git clone --recurse-submodules https://github.com/arpi-r/kubernetes-dt`.
 
 ## Running the ABS Kubernetes Models:
 
