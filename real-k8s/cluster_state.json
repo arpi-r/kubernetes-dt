@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "307226102n",
+      "memory": "963588Ki"
+    }
+  ],
+  "pods": [
+    {
+      "name": "example1-cb6d84599-g7488",
+      "containers": [
+        {
+          "name": "nginx",
+          "usage": {
+            "cpu": "1524509n",
+            "memory": "9932Ki"
+          }
+        }
+      ]
+    },
+    {
+      "name": "example1-cb6d84599-j4n4d",
+      "containers": [
+        {
+          "name": "nginx",
+          "usage": {
+            "cpu": "0",
+            "memory": "6916Ki"
+          }
+        }
+      ]
+    },
+    {
+      "name": "example1-cb6d84599-jqfsq",
+      "containers": [
+        {
+          "name": "nginx",
+          "usage": {
+            "cpu": "0",
+            "memory": "12588Ki"
+          }
+        }
+      ]
+    }
+  ]
+}
