@@ -79,6 +79,7 @@ interface Node{
   Unit setName(String nName);
   String getName();
   NodeResourcesMonitor getMonitor();
+  NodeState getState();
   //Use Node cpu, equivalent to [Cost: amount] skip;
   Rat consumeCpu(Rat amount,Pod p);
 
@@ -115,6 +116,7 @@ interface Node{
 
   Unit setName(String nName){
     this.name = nName;
+    monitor!setName(nName);
   }
 
   String getName(){
@@ -127,6 +129,11 @@ interface Node{
 
   NodeResourcesMonitor getMonitor(){
     return this.monitor;
+  }
+
+  NodeState getState(){
+    NodeState ns = this.monitor.getNodeState();
+    return ns;
   }
 
   // Sets the consumptions on the monitor and reset the availableCpu to the full value.

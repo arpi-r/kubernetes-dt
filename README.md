@@ -44,3 +44,9 @@ THEN
 ```bash
 ./gen/erl/run
 ```    
+
+## Running the digital twin created from cluster_state.json of the real kubernetes cluster
+```bash
+cd abs-k8s-model
+bash state_mapper.sh
+```
