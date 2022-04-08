@@ -1,21 +1,30 @@
 {
+  "services": [
+    {
+      "name": "example1",
+      "maxPods": 10,
+      "minPods": 1,
+      "upscaleThreshold": 10,
+      "downscalePeriod": 300
+    }
+  ],
   "nodes": [
     {
       "name": "real-k8s-control-plane",
-      "cpu": "226036353n",
-      "memory": "812876Ki",
+      "cpu": "232847907n",
+      "memory": "786056Ki",
       "pods": []
     },
     {
       "name": "real-k8s-worker",
-      "cpu": "38184612n",
-      "memory": "239548Ki",
+      "cpu": "39777163n",
+      "memory": "236128Ki",
       "pods": []
     },
     {
       "name": "real-k8s-worker2",
-      "cpu": "68365512n",
-      "memory": "225352Ki",
+      "cpu": "64719336n",
+      "memory": "221424Ki",
       "pods": [
         {
           "name": "example1-75bb9ff9b9-wbwpd",
@@ -23,9 +32,10 @@
             {
               "name": "nginx",
               "usage": {
-                "cpu": "19721295n",
+                "cpu": "20649961n",
                 "memory": "7044Ki"
-              }
+              },
+              "cpu_limit": "500m"
             }
           ]
         }
@@ -33,8 +43,8 @@
     },
     {
       "name": "real-k8s-worker3",
-      "cpu": "74790314n",
-      "memory": "214496Ki",
+      "cpu": "66536656n",
+      "memory": "209324Ki",
       "pods": [
         {
           "name": "example1-75bb9ff9b9-b9gkd",
@@ -42,9 +52,10 @@
             {
               "name": "nginx",
               "usage": {
-                "cpu": "18226637n",
-                "memory": "7748Ki"
-              }
+                "cpu": "18040613n",
+                "memory": "7700Ki"
+              },
+              "cpu_limit": "500m"
             }
           ]
         }
