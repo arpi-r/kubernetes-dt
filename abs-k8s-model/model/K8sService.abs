@@ -71,7 +71,13 @@ class ServiceObject(ServiceConfig sConfig, PodConfig pConfig, ServiceLoadBalance
 interface Pod {
   Rat processRequest(Request request, Time started);
 
+  Unit setName(String name);
+  String getName();
+
   Unit setBlocked();
+
+  Unit consumeCpu(Rat cpu);
+  Unit consumeMemory(Rat memory);
 
   Rat getCpuConsumption();
   Rat getMemoryConsumption();
@@ -84,6 +90,8 @@ interface Pod {
   Int getID();
   Int getActiveRequests();
 
+  PodState getState();
+
   // wait before shut down.
   Bool isIdle();
 
@@ -92,6 +100,8 @@ interface Pod {
 [Scheduler: reset_availCpu_scheduler(queue)] class PodObject(String serviceName, Int id, Rat compUnitSize, Rat cpuRequest, Rat cpuLimit, ResourcesMonitor monitor, Rat insufficientMemCooldown, Rat refCycle) implements Pod {
   Bool executing = False;
   Bool blocked = False;
+
+  String name = "";
 
   Node node = null;
 
@@ -107,6 +117,14 @@ interface Pod {
   Unit setNode(Node n){
     this.node = n;
     this!refreshAvailableCpu();
+  }
+
+  Unit setName(String name){
+    this.name = name;
+  }
+
+  String getName(){
+    return this.name;
   }
 
   Unit refreshAvailableCpu(){
@@ -225,6 +243,14 @@ interface Pod {
     return v;
   }
 
+  Unit consumeCpu(Rat cpu){
+    await monitor!consumeCpu(cpu);
+  }
+
+  Unit consumeMemory(Rat memory){
+    await monitor!consumedMemoryUpdate(memory);
+  }
+
   Rat getCpuConsumption(){
     Rat value = await monitor!cpuConsumption();
     return value;
@@ -249,6 +275,10 @@ interface Pod {
   String getServiceName(){ return this.serviceName;}
   Int getID(){ return this.id; }
   Node getNode(){return this.node; }
+
+  PodState getState(){
+    return monitor.getPodState();
+  }
 
 }
 

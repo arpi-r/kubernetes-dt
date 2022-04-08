@@ -16,9 +16,13 @@ interface Master{
 
   List<NodeState> getNodesStates();
 
+  List<Node> getNodes();
+
   List<Pair<String,ConsumptionMap>> getNodesMap();
 
   Bool createNodes(Int nNodes, Rat cpu, Rat memory);
+
+  Bool createNode(Rat cpu, Rat memory);
 }
 class MasterObject(CloudProvider cp, Rat timeUnitSize, Int loadPeriod, Int resourceCycle) implements Master{
   NodeScheduler scheduler;
@@ -35,6 +39,11 @@ class MasterObject(CloudProvider cp, Rat timeUnitSize, Int loadPeriod, Int resou
   List<NodeState> getNodesStates(){
     List<NodeState> list = await scheduler!getNodeStates();
     return list;
+  }
+
+  List<Node> getNodes(){
+    List<Node> nList = await scheduler!getNodes();
+    return nList;
   }
 
   List<Pair<String,ConsumptionMap>> getNodesMap(){
@@ -56,14 +65,21 @@ class MasterObject(CloudProvider cp, Rat timeUnitSize, Int loadPeriod, Int resou
     await this.scheduler!createNodes(nNodes, cpu, memory, timeUnitSize);
     return True;
   }
+
+  Bool createNode(Rat cpu, Rat memory) {
+    await this.scheduler!createNodes(1, cpu, memory, timeUnitSize);
+    return True;
+  }
 }
 
 //
 // NODE
 //
 interface Node{
+  Unit setName(String nName);
   String getName();
   NodeResourcesMonitor getMonitor();
+  NodeState getState();
   //Use Node cpu, equivalent to [Cost: amount] skip;
   Rat consumeCpu(Rat amount,Pod p);
 
@@ -98,6 +114,11 @@ interface Node{
     this!resetResources();
   }
 
+  Unit setName(String nName){
+    this.name = nName;
+    monitor!setName(nName);
+  }
+
   String getName(){
     return this.name;
   }
@@ -108,6 +129,11 @@ interface Node{
 
   NodeResourcesMonitor getMonitor(){
     return this.monitor;
+  }
+
+  NodeState getState(){
+    NodeState ns = this.monitor.getNodeState();
+    return ns;
   }
 
   // Sets the consumptions on the monitor and reset the availableCpu to the full value.

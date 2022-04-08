@@ -1,0 +1,15 @@
+module K8sDT;
+
+import * from K8sService;
+import * from K8sMaster;
+import * from K8sUtil;
+import * from ABS.DC;
+
+{
+    CloudProvider cp = new CloudProvider("Cloud");
+    Master master;
+    Bool fb = False;
+
+    Printer printer = new PrinterObject();
+
+    master = new MasterObject(cp,1,1,1);

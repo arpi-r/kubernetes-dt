@@ -183,7 +183,9 @@ interface ResourcesMonitor{
 
   PodState getPodState(){
     //println("getPodState: memoryDisplay value: " + toString(this.memoryDisplay));
+    this.resourcesRefresh();
     PodState ps = PodState(this.serviceName, this.id, this.nodeName, this.cpuDisplay, this.memoryDisplay, this.cpuConsumptionRatio);
+    //PodState ps = PodState(this.serviceName, this.id, this.nodeName, this.cpu, this.memoryChange, this.cpuConsumptionRatio);
 
     return ps;
   }
@@ -214,6 +216,8 @@ interface NodeResourcesMonitor{
   Unit setRequestedCpu(Rat value);
 
   Unit setNode(Node n);
+
+  Unit setName(String n);
 
   NodeState getNodeState();
 
@@ -275,6 +279,10 @@ class NodeResourcesMonitorObject(Rat cycle, Rat totalCpu, Rat totalMemory) imple
     this.nodeName = await node!getName();
   }
 
+  Unit setName(String n){
+    this.nodeName = n;
+  }
+
   Rat getAverageLoad(Int period){
     Int time = truncate(timeValue(now())) - 1;
     Int ctr = 0;
@@ -310,6 +318,8 @@ interface Printer{
 
   Unit printNodes(Master m, Int times, Rat interval);
   Unit printService(Service s, Int times, Rat interval);
+
+  Unit printPods(List<Pod> pods);
 
   // print master and services status
   Unit printStatus(Master m, List<Service> sList, Int times, Rat interval);
@@ -372,6 +382,20 @@ class PrinterObject() implements Printer {
 
       await duration(interval,interval);
     }
+  }
+
+  Unit printPods(List<Pod> pods){
+    println("POD STATUS:");
+    foreach (p in pods){
+      PodState ps = p.getState();
+      String podName = p.getName();
+      // Rat cpu = p.getCpuConsumption();
+      // Rat memory = p.getMemoryConsumption();
+      Rat cpu = cpuConsumption(ps);
+      Rat memory = memoryConsumption(ps);
+      println("Pod: " + podName + "   Cpu: " + toString(cpu) + "   Memory: " + toString(memory));
+    }
+    println("");
   }
 
   Unit printStatus(Master m, List<Service> sList, Int times, Rat interval){
