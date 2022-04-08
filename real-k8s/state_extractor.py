@@ -54,15 +54,26 @@ def get_nodes_usage(api):
     print(nodes)
     return nodes
 
+def map_nodes_to_pods(pods, nodes):
+    v1 = client.CoreV1Api()
+    for node in nodes:
+        node['pods'] = []
+        field_selector = 'spec.nodeName=' + node['name']
+        pods_on_node = v1.list_pod_for_all_namespaces(watch = False, field_selector = field_selector)
+        for pod in pods_on_node.items:
+            for pod_on_node in pods:
+                if pod.metadata.name == pod_on_node['name']:
+                    node['pods'].append(pod_on_node)
 
 def get_resource_usage():
     api = client.CustomObjectsApi()
     pods = get_pods_usage(api)
     nodes = get_nodes_usage(api)
 
+    map_nodes_to_pods(pods, nodes)
+
     cluster_usage = {
-        'nodes': nodes,
-        'pods': pods
+        'nodes': nodes
     }
 
     with open('./cluster_state.json', 'w') as f:

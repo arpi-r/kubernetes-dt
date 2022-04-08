@@ -2,44 +2,51 @@
   "nodes": [
     {
       "name": "real-k8s-control-plane",
-      "cpu": "307226102n",
-      "memory": "963588Ki"
-    }
-  ],
-  "pods": [
+      "cpu": "226036353n",
+      "memory": "812876Ki",
+      "pods": []
+    },
     {
-      "name": "example1-cb6d84599-g7488",
-      "containers": [
+      "name": "real-k8s-worker",
+      "cpu": "38184612n",
+      "memory": "239548Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker2",
+      "cpu": "68365512n",
+      "memory": "225352Ki",
+      "pods": [
         {
-          "name": "nginx",
-          "usage": {
-            "cpu": "1524509n",
-            "memory": "9932Ki"
-          }
+          "name": "example1-75bb9ff9b9-wbwpd",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "19721295n",
+                "memory": "7044Ki"
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "name": "example1-cb6d84599-j4n4d",
-      "containers": [
+      "name": "real-k8s-worker3",
+      "cpu": "74790314n",
+      "memory": "214496Ki",
+      "pods": [
         {
-          "name": "nginx",
-          "usage": {
-            "cpu": "0",
-            "memory": "6916Ki"
-          }
-        }
-      ]
-    },
-    {
-      "name": "example1-cb6d84599-jqfsq",
-      "containers": [
-        {
-          "name": "nginx",
-          "usage": {
-            "cpu": "0",
-            "memory": "12588Ki"
-          }
+          "name": "example1-75bb9ff9b9-b9gkd",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "18226637n",
+                "memory": "7748Ki"
+              }
+            }
+          ]
         }
       ]
     }
