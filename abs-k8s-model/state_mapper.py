@@ -8,18 +8,21 @@ def read_cluster_state(file_name):
         return cluster_state
 
 def extract_service_info(services, numPods):
-    service_info = {}
-    service = services[0]
-    service_info['name'] = service['name']
-    service_info['maxPods'] = str(service['maxPods'])
-    service_info['minPods'] = str(service['minPods'])
-    service_info['upscaleThreshold'] = str(service['upscaleThreshold']) + "/100"
-    service_info['downscalePeriod'] = str(service['downscalePeriod'])
-    service_info['downscaleThreshold'] = "5/100"
-    service_info['scalerCycle'] = "1"
-    service_info['startingPods'] = str(numPods)
+    services_info = []
 
-    return service_info
+    for service in services:
+        service_info = {}
+        service_info['name'] = service['name']
+        service_info['maxPods'] = str(service['maxPods'])
+        service_info['minPods'] = str(service['minPods'])
+        service_info['upscaleThreshold'] = str(service['upscaleThreshold']) + "/100"
+        service_info['downscalePeriod'] = str(service['downscalePeriod'])
+        service_info['downscaleThreshold'] = "5/100"
+        service_info['scalerCycle'] = "1"
+        service_info['startingPods'] = str(numPods)
+        services_info.append(service_info)
+
+    return services_info
 
 def extract_pods_info(pods):
     pods_info = []
@@ -74,7 +77,7 @@ def get_prefix_abs(file_name):
         # print(prefix)
     return prefix
 
-def create_abs(prefix, nodes_info, service):
+def create_topo_abs(prefix, nodes_info, service):
     main_abs = prefix
 
     for node in nodes_info:
@@ -97,7 +100,7 @@ def create_abs(prefix, nodes_info, service):
         for pod in node['pods']:
             main_abs += "\n\tResourcesMonitor prm" + str(node_count) + str(pod_count) \
                         + " = new ResourcesMonitorObject(\"" + service['name'] + "\", " \
-                        + str(node_count) + str(pod_count) + ", 1, " + pod['cpu_limit'] + ");\n"
+                        + str(node_count) + str(pod_count) + ", 1, " + pod['cpu'] + ");\n"
             main_abs += "\tPod p" + str(node_count) + str(pod_count) + " = new PodObject(\"" + service['name'] + "\", " \
                         + str(node_count) + str(pod_count) + ", 1, " + pod['cpu'] + ", " + pod['cpu_limit'] \
                         + ", prm" + str(node_count) + str(pod_count) + ", 1, 1);\n"
@@ -131,6 +134,38 @@ def create_abs(prefix, nodes_info, service):
     
     return main_abs
 
+def create_service_abs(prefix, services, nodes):
+    service_abs = prefix
+
+    service_abs += "\n\tServiceLoadBalancerPolicy policy = new RoundRobinLbPolicy();\n"
+    service_abs += "\n\tList<Service> serviceList = list[];\n"
+    service = services[0]
+    service_abs += "\tServiceConfig service1Config = ServiceConfig(\"" + service['name'] + "\", " + service['startingPods'] \
+                    + ", " + service['minPods'] + ", " + service['maxPods'] + ", " + service['scalerCycle'] + ",  " \
+                    + service['upscaleThreshold'] + ", " + service['downscaleThreshold'] + ", " + service['downscalePeriod'] + ");\n"
+    
+    pod_count = 1
+    service_count = 1
+    for node in nodes:
+        for pod in node['pods']:
+            # Rat compUnitSize, Rat monitorCycle, Rat memoryCooldown, Rat cpuRequest, Rat cpuLimit
+            service_abs += "\tPodConfig pod" + str(pod_count) + "Config = PodConfig(1, 1, 1, " + pod['cpu'] + ", " + pod['cpu_limit'] + ");\n"
+            service_abs += "\tService service" + str(service_count) + " = new ServiceObject(service1Config, pod" + str(pod_count) + "Config, policy);\n"
+            service_abs += "\tserviceList = appendright(serviceList, service" + str(service_count) + ");\n"
+
+            pod_count += 1
+            service_count += 1
+    
+    service_abs += "\n\tList<ServiceEndpoint> endpoints = list[];\n"
+    service_abs += "\tforeach (service in serviceList) {\n"
+    service_abs += "\t\tmaster.deployService(service);\n"
+    service_abs += "\t\tServiceEndpoint serviceEP = await service!getServiceEndpoint();\n"
+    service_abs += "\t\tendpoints = appendright(endpoints, serviceEP);\n\t}\n"
+
+    service_abs += "\n\tawait printer!printService(service1, 1, 1);\n"
+
+    return service_abs
+
 def create_final_abs(prefix):
     final_abs = prefix
 
@@ -149,12 +184,13 @@ cluster_state = read_cluster_state('../real-k8s/cluster_state.json')
 nodes_info = extract_nodes_info(cluster_state['nodes'])
 # print()
 # print(nodes_info)
-service = extract_service_info(cluster_state['services'], getNumPods(nodes_info))
+services_info = extract_service_info(cluster_state['services'], getNumPods(nodes_info))
 # print()
 # print(service)
 prefix = get_prefix_abs('prefix_abs.txt')
-main_abs = create_abs(prefix, nodes_info, service)
-final_abs = create_final_abs(main_abs)
+main_abs = create_topo_abs(prefix, nodes_info, services_info[0])
+service_abs = create_service_abs(main_abs, services_info, nodes_info)
+final_abs = create_final_abs(service_abs)
 # print()
 # print(final_abs)
 write_k8sdt_abs('K8sDT.abs', final_abs)

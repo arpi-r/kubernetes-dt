@@ -368,7 +368,11 @@ class ServiceLoadBalancerObject(ServiceLoadBalancerPolicy policy) implements Ser
       ratio = ratio + r;
     }
 
-    ratio = ratio / length(pods);
+    //println("pod length: " + toString(length(pods)));
+    if (length(pods) > 0){
+      ratio = ratio / length(pods);
+    }
+    //ratio = ratio / length(pods);
 
     return ServiceState(cpu,memory,ratio);
   }
