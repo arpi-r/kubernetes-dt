@@ -7,6 +7,20 @@ def read_cluster_state(file_name):
         cluster_state = json.load(f)
         return cluster_state
 
+def extract_service_info(services, numPods):
+    service_info = {}
+    service = services[0]
+    service_info['name'] = service['name']
+    service_info['maxPods'] = str(service['maxPods'])
+    service_info['minPods'] = str(service['minPods'])
+    service_info['upscaleThreshold'] = str(service['upscaleThreshold']) + "/100"
+    service_info['downscalePeriod'] = str(service['downscalePeriod'])
+    service_info['downscaleThreshold'] = "5/100"
+    service_info['scalerCycle'] = "1"
+    service_info['startingPods'] = str(numPods)
+
+    return service_info
+
 def extract_pods_info(pods):
     pods_info = []
     pod_info = {}
@@ -15,26 +29,44 @@ def extract_pods_info(pods):
         pod_info['cpu'] = pod['containers'][0]['usage']['cpu']
         cpu_len = len(pod_info['cpu'])
         if pod_info['cpu'][cpu_len - 1] == 'n':
-            pod_info['cpu'] = pod_info['cpu'][:cpu_len - 1]
+            pod_info['cpu'] = str(int(pod_info['cpu'][:cpu_len - 1]) // 1000000)
         pod_info['memory'] = pod['containers'][0]['usage']['memory']
         mem_len = len(pod_info['memory'])
         if pod_info['memory'][mem_len - 2:] == 'Ki':
             pod_info['memory'] = pod_info['memory'][:mem_len - 2]
+        pod_info['cpu_limit'] = pod['containers'][0]['cpu_limit']
+        cpu_lim_len = len(pod_info['cpu_limit'])
+        if pod_info['cpu_limit'][cpu_lim_len - 1] == 'm':
+            pod_info['cpu_limit'] = pod_info['cpu_limit'][:cpu_lim_len - 1]
         pods_info.append(pod_info)
         pod_info = {}
 
     return pods_info
 
-def extract_nodes_info(nodes_info):
-    for node in nodes_info:
-        cpu_len = len(node['cpu'])
-        if node['cpu'][cpu_len - 1] == 'n':
-            node['cpu'] = node['cpu'][:cpu_len - 1]
-        mem_len = len(node['memory'])
-        if node['memory'][mem_len - 2:] == 'Ki':
-            node['memory'] = node['memory'][:mem_len - 2]
+def extract_nodes_info(nodes):
+    nodes_info = []
+    node_info = {}
+    for node in nodes:
+        node_info['name'] = node['name']
+        node_info['cpu'] = node['cpu']
+        cpu_len = len(node_info['cpu'])
+        if node_info['cpu'][cpu_len - 1] == 'n':
+            node_info['cpu'] = str(int(node_info['cpu'][:cpu_len - 1]) // 1000000)
+        node_info['memory'] = node['memory']
+        mem_len = len(node_info['memory'])
+        if node_info['memory'][mem_len - 2:] == 'Ki':
+            node_info['memory'] = node_info['memory'][:mem_len - 2]
+        node_info['pods'] = extract_pods_info(node['pods'])
+        nodes_info.append(node_info)
+        node_info = {}
         
     return nodes_info
+
+def getNumPods(nodes_info):
+    numPods = 0
+    for node in nodes_info:
+        numPods += len(node['pods'])
+    return numPods
 
 def get_prefix_abs(file_name):
     with open(file_name, 'r') as f:
@@ -42,59 +74,62 @@ def get_prefix_abs(file_name):
         # print(prefix)
     return prefix
 
-def create_nodes_abs(prefix, nodes_info):
-    nodes_abs = prefix
+def create_abs(prefix, nodes_info, service):
+    main_abs = prefix
 
     for node in nodes_info:
-        nodes_abs += "\n" + "\tfb = master.createNode(" + node['cpu'] + ", " + node['memory'] + ");"
+        main_abs += "\n" + "\tfb = master.createNode(" + node['cpu'] + ", " + node['memory'] + ");"
 
-    nodes_abs += "\n"
-
-    nodes_abs += "\n\tList<Node> nodeList = master.getNodes();\n\tforeach (node in nodeList) {\n"
-
+    main_abs += "\n\n"
+    
+    main_abs += "\tList<String> nodeNames = list[];\n"
     for node in nodes_info:
-        nodes_abs += "\t\tString name = \"" + node['name'] + "\";\n\t\tnode!setName(name);\n"
+        main_abs += "\tnodeNames = appendright(nodeNames,\"" + node['name'] + "\");\n"
+
+    main_abs += "\n\tList<List<Pod>> nodePodList = list[];\n\tList<Pod> podList = list[];\n"
+
+    node_count = 1
+    num_nodes = len(nodes_info)
+    for node in nodes_info:
+        pod_count = 1
+        num_pods = len(node['pods'])
+
+        for pod in node['pods']:
+            main_abs += "\n\tResourcesMonitor prm" + str(node_count) + str(pod_count) \
+                        + " = new ResourcesMonitorObject(\"" + service['name'] + "\", " \
+                        + str(node_count) + str(pod_count) + ", 1, " + pod['cpu_limit'] + ");\n"
+            main_abs += "\tPod p" + str(node_count) + str(pod_count) + " = new PodObject(\"" + service['name'] + "\", " \
+                        + str(node_count) + str(pod_count) + ", 1, " + pod['cpu'] + ", " + pod['cpu_limit'] \
+                        + ", prm" + str(node_count) + str(pod_count) + ", 1, 1);\n"
+            
+            main_abs += "\tp" + str(node_count) + str(pod_count) + ".setName(\"" + pod['name'] + "\");\n"
+            main_abs += "\tp" + str(node_count) + str(pod_count) + ".consumeCpu(" + pod['cpu'] + ");\n"
+            main_abs += "\tp" + str(node_count) + str(pod_count) + ".consumeMemory(" + pod['memory'] + ");\n"
+
+            main_abs += "\tpodList = appendright(podList, p" + str(node_count) + str(pod_count) + ");\n"
+
+            pod_count += 1
+
+        node_count += 1
+        main_abs += "\tnodePodList = appendright(nodePodList, podList);\n\tpodList = list[];\n"
+
+    main_abs += "\n\tList<Node> nodeList = master.getNodes();\n\tInt c = 0;\n\tforeach (node in nodeList) {\n"
+
+    main_abs += "\t\tString name = nth(nodeNames,c);\n\t\tnode!setName(name);\n"
     
-    nodes_abs += "\t}\n\n"
+    main_abs += "\t\tpodList = nth(nodePodList,c);\n"
+    main_abs += "\n\t\tforeach (pod in podList) {\n\t\t\tResourcesMonitor prm = pod.getMonitor();\n"
+    main_abs += "\t\t\tawait node!addPod(pod,prm);\n\t\t}\n"
 
-    # nodes_abs += "\tawait printer!printNodes(master,1,1);\n}\n"
+    main_abs += "\n\t\tList<Pod> pods = node.getPods();\n\t\tawait printer!printPods(pods);\n"
+
+    main_abs += "\n\t\tc = c + 1;\n"
     
-    return nodes_abs
+    main_abs += "\t}\n\n"
 
-def create_pods_abs(prefix, pods_info):
-    pods_abs = prefix
-
-    # pods_abs += "\n\tList<Node> nodeList = master.getNodes();\n"
-
-    pods_abs += "\n\n\tforeach (node in nodeList) {\n"
-
-    i = 0
-    for pod in pods_info:
-        if int(pod['cpu'])*2 == 0:
-            pods_abs += "\t\tResourcesMonitor pod" + str(i) + " = new ResourcesMonitorObject(\"service 1\", " + str(i) + ", 1, 1);\n"
-            pods_abs += "\t\tPod p" + str(i) + " = new PodObject(\"service 1\", " + str(i) + ", 1, " + pod['cpu'] + ", 1, pod" + str(i) + ", 1, 1);\n"
-        else:
-            pods_abs += "\t\tResourcesMonitor pod" + str(i) + " = new ResourcesMonitorObject(\"service 1\", " + str(i) + ", 1, " + str(int(pod['cpu'])*2) + ");\n"
-            pods_abs += "\t\tPod p" + str(i) + " = new PodObject(\"service 1\", " + str(i) + ", 1, " + pod['cpu'] + ", " + str(int(pod['cpu'])*2) + ", pod" + str(i) + ", 1, 1);\n"
-
-        pods_abs += "\t\tp" + str(i) + ".setName(\"" + pod['name'] + "\");\n"
-        pods_abs += "\t\tp" + str(i) + ".consumeCpu(" + pod['cpu'] + ");\n"
-        pods_abs += "\t\tp" + str(i) + ".consumeMemory(" + pod['memory'] + ");\n"
-
-        pods_abs += "\t\tawait node!addPod(p" + str(i) + ", pod" + str(i) + ");\n"
-
-        i += 1
+    main_abs += "\tawait printer!printNodes(master,1,1);\n"
     
-    pods_abs += "\t}\n\n"
-
-    pods_abs += "\tawait printer!printNodes(master,1,1);\n\tprintln(\"\");\n"
-
-    pods_abs += "\n\tforeach (node in nodeList) {\n"
-    pods_abs += "\t\tString name = node.getName();\n\t\tprintln(\"Node \" + name + \": \");\n"
-    pods_abs += "\t\tList<Pod> pods = node.getPods();\n\t\tawait printer!printPods(pods);\n"
-    pods_abs += "\t}\n\n"
-
-    return pods_abs
+    return main_abs
 
 def create_final_abs(prefix):
     final_abs = prefix
@@ -112,10 +147,15 @@ def write_k8sdt_abs(file_name, final_abs):
 
 cluster_state = read_cluster_state('../real-k8s/cluster_state.json')
 nodes_info = extract_nodes_info(cluster_state['nodes'])
-pods_info = extract_pods_info(cluster_state['pods'])
+# print()
+# print(nodes_info)
+service = extract_service_info(cluster_state['services'], getNumPods(nodes_info))
+# print()
+# print(service)
 prefix = get_prefix_abs('prefix_abs.txt')
-nodes_abs = create_nodes_abs(prefix, nodes_info)
-pods_abs = create_pods_abs(nodes_abs, pods_info)
-final_abs = create_final_abs(pods_abs)
+main_abs = create_abs(prefix, nodes_info, service)
+final_abs = create_final_abs(main_abs)
+# print()
+# print(final_abs)
 write_k8sdt_abs('K8sDT.abs', final_abs)
 # print("DONE")
