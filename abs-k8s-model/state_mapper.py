@@ -19,7 +19,8 @@ def extract_service_info(services, numPods):
         service_info['downscalePeriod'] = str(service['downscalePeriod'])
         service_info['downscaleThreshold'] = "5/100"
         service_info['scalerCycle'] = "1"
-        service_info['startingPods'] = str(numPods)
+        # service_info['startingPods'] = str(numPods)
+        service_info['startingPods'] = str(1)
         services_info.append(service_info)
 
     return services_info
@@ -89,45 +90,10 @@ def create_topo_abs(prefix, nodes_info, service):
     for node in nodes_info:
         main_abs += "\tnodeNames = appendright(nodeNames,\"" + node['name'] + "\");\n"
 
-    main_abs += "\n\tList<List<Pod>> nodePodList = list[];\n\tList<Pod> podList = list[];\n"
-
-    node_count = 1
-    num_nodes = len(nodes_info)
-    for node in nodes_info:
-        pod_count = 1
-        num_pods = len(node['pods'])
-
-        for pod in node['pods']:
-            main_abs += "\n\tResourcesMonitor prm" + str(node_count) + str(pod_count) \
-                        + " = new ResourcesMonitorObject(\"" + service['name'] + "\", " \
-                        + str(node_count) + str(pod_count) + ", 1, " + pod['cpu'] + ");\n"
-            main_abs += "\tPod p" + str(node_count) + str(pod_count) + " = new PodObject(\"" + service['name'] + "\", " \
-                        + str(node_count) + str(pod_count) + ", 1, " + pod['cpu'] + ", " + pod['cpu_limit'] \
-                        + ", prm" + str(node_count) + str(pod_count) + ", 1, 1);\n"
-            
-            main_abs += "\tp" + str(node_count) + str(pod_count) + ".setName(\"" + pod['name'] + "\");\n"
-            main_abs += "\tp" + str(node_count) + str(pod_count) + ".consumeCpu(" + pod['cpu'] + ");\n"
-            main_abs += "\tp" + str(node_count) + str(pod_count) + ".consumeMemory(" + pod['memory'] + ");\n"
-
-            main_abs += "\tpodList = appendright(podList, p" + str(node_count) + str(pod_count) + ");\n"
-
-            pod_count += 1
-
-        node_count += 1
-        main_abs += "\tnodePodList = appendright(nodePodList, podList);\n\tpodList = list[];\n"
-
     main_abs += "\n\tList<Node> nodeList = master.getNodes();\n\tInt c = 0;\n\tforeach (node in nodeList) {\n"
-
     main_abs += "\t\tString name = nth(nodeNames,c);\n\t\tnode!setName(name);\n"
-    
-    main_abs += "\t\tpodList = nth(nodePodList,c);\n"
-    main_abs += "\n\t\tforeach (pod in podList) {\n\t\t\tResourcesMonitor prm = pod.getMonitor();\n"
-    main_abs += "\t\t\tawait node!addPod(pod,prm);\n\t\t}\n"
-
-    main_abs += "\n\t\tList<Pod> pods = node.getPods();\n\t\tawait printer!printPods(pods);\n"
-
+    # main_abs += "\n\t\tList<Pod> pods = node.getPods();\n\t\tawait printer!printPods(pods);\n"
     main_abs += "\n\t\tc = c + 1;\n"
-    
     main_abs += "\t}\n\n"
 
     main_abs += "\tawait printer!printNodes(master,1,1);\n"
@@ -144,30 +110,37 @@ def create_service_abs(prefix, services, nodes):
                     + ", " + service['minPods'] + ", " + service['maxPods'] + ", " + service['scalerCycle'] + ",  " \
                     + service['upscaleThreshold'] + ", " + service['downscaleThreshold'] + ", " + service['downscalePeriod'] + ");\n"
     
+    service_abs += "\tNode n = nth(nodeList, 0);\n"
+    node_count = 0
     pod_count = 1
     service_count = 1
     for node in nodes:
         for pod in node['pods']:
             # Rat compUnitSize, Rat monitorCycle, Rat memoryCooldown, Rat cpuRequest, Rat cpuLimit
-            service_abs += "\tPodConfig pod" + str(pod_count) + "Config = PodConfig(1, 1, 1, " + pod['cpu'] + ", " + pod['cpu_limit'] + ");\n"
+            # should memory cooldown value be pod['memory'] or will that be used sometime later?
+            service_abs += "\tPodConfig pod" + str(pod_count) + "Config = PodConfig(1, 1, " + pod['memory'] + ", " + pod['cpu'] + ", " + pod['cpu_limit'] + ");\n"
             service_abs += "\tService service" + str(service_count) + " = new ServiceObject(service1Config, pod" + str(pod_count) + "Config, policy);\n"
             service_abs += "\tserviceList = appendright(serviceList, service" + str(service_count) + ");\n"
+            service_abs += "\tn = nth(nodeList, " + str(node_count) + ");\n"
+            service_abs += "\tmaster.deployServiceOnNode(service" + str(service_count) + ", n, \"" + pod['name'] + "\");\n"
 
             pod_count += 1
             service_count += 1
+        node_count += 1
     
     service_abs += "\n\tList<ServiceEndpoint> endpoints = list[];\n"
     service_abs += "\tforeach (service in serviceList) {\n"
-    service_abs += "\t\tmaster.deployService(service);\n"
+    # service_abs += "\t\tmaster.deployService(service);\n"
     service_abs += "\t\tServiceEndpoint serviceEP = await service!getServiceEndpoint();\n"
-    service_abs += "\t\tendpoints = appendright(endpoints, serviceEP);\n\t}\n"
-
-    service_abs += "\n\tawait printer!printService(service1, 1, 1);\n"
+    service_abs += "\t\tendpoints = appendright(endpoints, serviceEP);\n"
+    service_abs += "\t\tawait printer!printService(service, 1, 1);\n\t}\n"
 
     return service_abs
 
 def create_final_abs(prefix):
     final_abs = prefix
+
+    final_abs += "\tawait printer!printNodes(master,1,1);\n"
 
     final_abs += "\tawait duration(5,5);\n"
     final_abs += "}\n"

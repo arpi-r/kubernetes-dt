@@ -15,6 +15,7 @@ interface Service{
   ServiceEndpoint getServiceEndpoint();
 
   Unit deploy(NodeScheduler scheduler);
+  Unit deployOnNode(NodeScheduler scheduler, Node n, String name);
 
   //fst = cpu , snd = memory
   ServiceState getConsumption();
@@ -38,6 +39,11 @@ class ServiceObject(ServiceConfig sConfig, PodConfig pConfig, ServiceLoadBalance
   Unit deploy(NodeScheduler scheduler){
     scaler = new ServiceAutoscalerObject(scheduler, lb, sConfig, pConfig);
     scaler.initialize();
+  }
+
+  Unit deployOnNode(NodeScheduler scheduler, Node n, String name){
+    scaler = new ServiceAutoscalerObject(scheduler, lb, sConfig, pConfig);
+    scaler.initializeUsingNode(n, name);
   }
 
   ServiceEndpoint getServiceEndpoint(){
@@ -395,6 +401,7 @@ class ServiceLoadBalancerObject(ServiceLoadBalancerPolicy policy) implements Ser
 //
 interface ServiceAutoscaler{
   Unit initialize();
+  Unit initializeUsingNode(Node n, String name);
 }
 //
 class ServiceAutoscalerObject(NodeScheduler scheduler, ServiceLoadBalancer lb, ServiceConfig sConfig, PodConfig pConfig) implements ServiceAutoscaler{
@@ -425,6 +432,17 @@ class ServiceAutoscalerObject(NodeScheduler scheduler, ServiceLoadBalancer lb, S
     Int nStartingPods = startingPods(sConfig);
     while (ctr < nStartingPods) {
       this.launchPod();
+      ctr=ctr+1;
+    }
+    println("[Time: "+toString(timeValue(now()))+"] ***********INIT: CREATED "+toString(nStartingPods)+" PODS");
+    this!resize();
+  }
+
+  Unit initializeUsingNode(Node n, String name){
+    Int ctr = 0;
+    Int nStartingPods = startingPods(sConfig);
+    while (ctr < nStartingPods) {
+      this.launchPodOnNode(n, name);
       ctr=ctr+1;
     }
     println("[Time: "+toString(timeValue(now()))+"] ***********INIT: CREATED "+toString(nStartingPods)+" PODS");
@@ -475,6 +493,21 @@ class ServiceAutoscalerObject(NodeScheduler scheduler, ServiceLoadBalancer lb, S
     p!setNode(n);
     rm!setNode(n);
     lb!addPod(p,rm);
+
+    this.nextID = this.nextID + 1;
+    this.nPods = this.nPods + 1;
+  }
+
+  Unit launchPodOnNode(Node n, String name){
+    ResourcesMonitor rm = new ResourcesMonitorObject(name(sConfig), this.nextID, monitorCycle(pConfig),cpuRequest(pConfig));
+    Pod p = new PodObject(name(sConfig), this.nextID, compUnitSize(pConfig), cpuRequest(pConfig), cpuLimit(pConfig), rm, memoryCooldown(pConfig), 1);
+    p!setName(name);
+    
+    rm!setPod(p);
+    p!setNode(n);
+    rm!setNode(n);
+    lb!addPod(p,rm);
+    n!addPod(p,rm);
 
     this.nextID = this.nextID + 1;
     this.nPods = this.nPods + 1;
