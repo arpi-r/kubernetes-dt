@@ -97,6 +97,7 @@ interface Pod {
   Int getActiveRequests();
 
   PodState getState();
+  PodState getStateForDT();
 
   // wait before shut down.
   Bool isIdle();
@@ -284,6 +285,10 @@ interface Pod {
 
   PodState getState(){
     return monitor.getPodState();
+  }
+
+  PodState getStateForDT(){
+    return monitor.getPodStateForDT();
   }
 
 }

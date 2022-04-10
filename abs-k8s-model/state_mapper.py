@@ -96,7 +96,7 @@ def create_topo_abs(prefix, nodes_info, service):
     main_abs += "\n\t\tc = c + 1;\n"
     main_abs += "\t}\n\n"
 
-    main_abs += "\tawait printer!printNodes(master,1,1);\n"
+    # main_abs += "\tawait printer!printNodes(master,1,1);\n"
     
     return main_abs
 
@@ -133,14 +133,16 @@ def create_service_abs(prefix, services, nodes):
     # service_abs += "\t\tmaster.deployService(service);\n"
     service_abs += "\t\tServiceEndpoint serviceEP = await service!getServiceEndpoint();\n"
     service_abs += "\t\tendpoints = appendright(endpoints, serviceEP);\n"
-    service_abs += "\t\tawait printer!printService(service, 1, 1);\n\t}\n"
+    # service_abs += "\t\tawait printer!printService(service, 1, 1);\n"
+    service_abs += "\t}\n"
 
     return service_abs
 
 def create_final_abs(prefix):
     final_abs = prefix
 
-    final_abs += "\tawait printer!printNodes(master,1,1);\n"
+    # final_abs += "\tawait printer!printNodes(master,1,1);\n"
+    final_abs += "\tawait printer!printDT(master, serviceList);\n"
 
     final_abs += "\tawait duration(5,5);\n"
     final_abs += "}\n"

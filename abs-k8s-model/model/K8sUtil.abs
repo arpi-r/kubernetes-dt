@@ -76,6 +76,7 @@ interface ResourcesMonitor{
   Unit shutdown();
 
   PodState getPodState();
+  PodState getPodStateForDT();
   Node getNode();
   Unit setNode(Node n);
 }
@@ -183,9 +184,15 @@ interface ResourcesMonitor{
 
   PodState getPodState(){
     //println("getPodState: memoryDisplay value: " + toString(this.memoryDisplay));
-    this.resourcesRefresh();
     PodState ps = PodState(this.serviceName, this.id, this.nodeName, this.cpuDisplay, this.memoryDisplay, this.cpuConsumptionRatio);
-    //PodState ps = PodState(this.serviceName, this.id, this.nodeName, this.cpu, this.memoryChange, this.cpuConsumptionRatio);
+
+    return ps;
+  }
+
+  PodState getPodStateForDT(){
+    //println("getPodState: memoryDisplay value: " + toString(this.memoryDisplay));
+    //this.resourcesRefresh();
+    PodState ps = PodState(this.serviceName, this.id, this.nodeName, this.cpu, this.memoryChange, this.cpuConsumptionRatio);
 
     return ps;
   }
@@ -323,6 +330,8 @@ interface Printer{
 
   // print master and services status
   Unit printStatus(Master m, List<Service> sList, Int times, Rat interval);
+  
+  Unit printDT(Master m, List<Service> sList);
 
   // print a portion of a history map
   Unit printMap(Pair<String,ConsumptionMap> map, Int tFrom, Int tTo);
@@ -385,9 +394,9 @@ class PrinterObject() implements Printer {
   }
 
   Unit printPods(List<Pod> pods){
-    println("POD STATUS:");
+    //println("POD STATUS:");
     foreach (p in pods){
-      PodState ps = p.getState();
+      PodState ps = p.getStateForDT();
       String podName = p.getName();
       // Rat cpu = p.getCpuConsumption();
       // Rat memory = p.getMemoryConsumption();
@@ -414,6 +423,33 @@ class PrinterObject() implements Printer {
 
       await duration(interval,interval);
     }
+  }
+
+  Unit printDT(Master m, List<Service> sList){
+    println("\n\n----------------------------- DIGITAL TWIN STATUS -----------------------------");
+    List<Node> nodesList = m.getNodes();
+    List<NodeState> list = m.getNodesStates();
+    Int c = 0;
+    foreach (node in nodesList){
+      NodeState state = nth(list, c);
+      c = c + 1;
+      println("Node: " + nName(state) + "   Pods: " + toString(nOfPods(state)) +
+              "   Cpu Load : " + toString(truncate(cpuLoad(state))) + " / " + toString(totalCpu(state)) +
+              "   Requested Cpu : " + toString(requestedCpu(state)) + " / " + toString(totalCpu(state)) +
+              "   Allocated Memory : " + toString(truncate(allocatedMemory(state))) + " / " + toString(totalMemory(state))
+              );
+      println("");
+      List<Pod> pods = node.getPods();
+      if (length(pods) > 0){
+        this.printPods(pods);
+      }
+      println("");
+    }
+    foreach (s in sList){
+      this.printServiceStatus(s);
+    }
+    println("");
+    println("-----------------------------------------------------------------------------");
   }
 
   Unit printMap(Pair<String,ConsumptionMap> map, Int tFrom, Int tTo){
