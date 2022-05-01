@@ -136,6 +136,8 @@ spec:
         - --secure-port=4443
         - --kubelet-use-node-status-port
         - --metric-resolution=15s
+        - --kubelet-insecure-tls
+        - --kubelet-preferred-address-types=InternalIP,ExternalIP
         command:
         - /metrics-server
         - --kubelet-insecure-tls
@@ -164,8 +166,8 @@ spec:
           periodSeconds: 10
         resources:
           requests:
-            cpu: 100m
-            memory: 200Mi
+            cpu: "100m"
+            memory: "200Mi"
         securityContext:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true

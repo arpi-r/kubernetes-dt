@@ -1,6 +1,5 @@
 import collections
 import json
-from pick import pick  # install pick using `pip install pick`
 
 from kubernetes import client, config
 
@@ -94,7 +93,7 @@ def map_nodes_to_pods(pods, nodes):
                     node['pods'].append(pod_on_node)
 
 
-def get_resource_usage():
+def get_resource_usage(eval=False):
     api = client.CustomObjectsApi()
     pods = get_pods_usage(api)
     nodes = get_nodes_usage(api)
@@ -102,14 +101,22 @@ def get_resource_usage():
     map_nodes_to_pods(pods, nodes)
     services = get_service_info()
 
-    cluster_usage = {
-        'services': services,
-        'nodes': nodes
-    }
+    cluster_usage = {}
 
-    with open('./cluster_state.json', 'w') as f:
+    if eval:
+        cluster_usage = {
+            'nodes': nodes
+        }
+    else:
+        cluster_usage = {
+            'services': services,
+            'nodes': nodes
+        }
+
+    with open('./cluster_state_1.json', 'a+') as f:
         state = json.dumps(cluster_usage, indent=2)
         f.write(state)
+        f.write(',')
 
 
 if __name__ == '__main__':
