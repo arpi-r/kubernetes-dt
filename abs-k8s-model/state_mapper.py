@@ -110,7 +110,10 @@ def create_service_abs(prefix, services, nodes):
                     + ", " + service['minPods'] + ", " + service['maxPods'] + ", " + service['scalerCycle'] + ",  " \
                     + service['upscaleThreshold'] + ", " + service['downscaleThreshold'] + ", " + service['downscalePeriod'] + ");\n"
     
-    service_abs += "\tNode n = nth(nodeList, 0);\n"
+    service_abs += "\tNode n = nth(nodeList, 0);\n\n"
+    service_abs += "\tList<Node> deploy_node_list = list[];\n\tList<PodConfig> pod_config_list = list[];\n"
+    service_abs += "\tList<String> podNames = list[];\n\n"
+
     node_count = 0
     pod_count = 1
     service_count = 1
@@ -119,14 +122,22 @@ def create_service_abs(prefix, services, nodes):
             # Rat compUnitSize, Rat monitorCycle, Rat memoryCooldown, Rat cpuRequest, Rat cpuLimit
             # should memory cooldown value be pod['memory'] or will that be used sometime later?
             service_abs += "\tPodConfig pod" + str(pod_count) + "Config = PodConfig(1, 1, " + pod['memory'] + ", " + pod['cpu'] + ", " + pod['cpu_limit'] + ");\n"
-            service_abs += "\tService service" + str(service_count) + " = new ServiceObject(service1Config, pod" + str(pod_count) + "Config, policy);\n"
-            service_abs += "\tserviceList = appendright(serviceList, service" + str(service_count) + ");\n"
+            service_abs += "\tpod_config_list = appendright(pod_config_list,pod" + str(pod_count) + "Config);\n"
+            # service_abs += "\tService service" + str(service_count) + " = new ServiceObject(service1Config, pod" + str(pod_count) + "Config, policy);\n"
+            # service_abs += "\tserviceList = appendright(serviceList, service" + str(service_count) + ");\n"
             service_abs += "\tn = nth(nodeList, " + str(node_count) + ");\n"
-            service_abs += "\tmaster.deployServiceOnNode(service" + str(service_count) + ", n, \"" + pod['name'] + "\");\n"
+            service_abs += "\tdeploy_node_list = appendright(deploy_node_list,n);\n"
+            # service_abs += "\tmaster.deployServiceOnNode(service" + str(service_count) + ", n, \"" + pod['name'] + "\");\n"\
+            service_abs += "\tpodNames = appendright(podNames,\"" + pod['name'] + "\");\n"
 
             pod_count += 1
             service_count += 1
         node_count += 1
+    
+    # service_abs += "\tService service_" + service['name'] + " = new ServiceObject(service_" + service['name'] + "_config, pod_config_list, policy);\n"
+    service_abs += "\tService service1 = new ServiceObject(service1Config, pod_config_list, policy);\n"
+    service_abs += "\tserviceList = appendright(serviceList, service1);\n"
+    service_abs += "\n\tmaster.deployServiceOnNodes(service1, deploy_node_list, podNames);\n"
     
     service_abs += "\n\tList<ServiceEndpoint> endpoints = list[];\n"
     service_abs += "\tforeach (service in serviceList) {\n"

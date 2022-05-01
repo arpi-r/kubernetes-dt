@@ -13,7 +13,7 @@ import * from ABS.Scheduler;
 //
 interface Master{
   Bool deployService(Service s);
-  Bool deployServiceOnNode(Service s, Node n, String name);
+  Bool deployServiceOnNodes(Service s, List<Node> n, List<String> name);
 
   List<NodeState> getNodesStates();
 
@@ -37,8 +37,8 @@ class MasterObject(CloudProvider cp, Rat timeUnitSize, Int loadPeriod, Int resou
     return True;
   }
 
-  Bool deployServiceOnNode(Service s, Node n, String name){
-    await s!deployOnNode(scheduler,n, name);
+  Bool deployServiceOnNodes(Service s, List<Node> n, List<String> name){
+    await s!deployOnNodes(scheduler,n, name);
     return True;
   }
 
