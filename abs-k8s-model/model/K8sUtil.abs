@@ -192,7 +192,8 @@ interface ResourcesMonitor{
   PodState getPodStateForDT(){
     //println("getPodState: memoryDisplay value: " + toString(this.memoryDisplay));
     //this.resourcesRefresh();
-    PodState ps = PodState(this.serviceName, this.id, this.nodeName, this.cpu, this.memoryChange, this.cpuConsumptionRatio);
+    //PodState ps = PodState(this.serviceName, this.id, this.nodeName, this.cpu, this.memoryChange, this.cpuConsumptionRatio);
+    PodState ps = PodState(this.serviceName, this.id, this.nodeName, this.cpuDisplay, this.memoryDisplay, this.cpuConsumptionRatio);
 
     return ps;
   }
@@ -402,7 +403,7 @@ class PrinterObject() implements Printer {
       // Rat memory = p.getMemoryConsumption();
       Rat cpu = cpuConsumption(ps);
       Rat memory = memoryConsumption(ps);
-      println("Pod: " + podName + "   Cpu: " + toString(cpu) + "   Memory: " + toString(memory));
+      println("Pod: " + podName + " ID: " + toString(podID(ps)) + "   Cpu: " + toString(cpu) + "   Memory: " + toString(memory));
     }
     println("");
   }

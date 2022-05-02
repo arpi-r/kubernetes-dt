@@ -450,7 +450,11 @@ class ServiceAutoscalerObject(NodeScheduler scheduler, ServiceLoadBalancer lb, S
       this.launchPodOnNodes(n, name);
       ctr=ctr+1;
     }
-    println("[Time: "+toString(timeValue(now()))+"] ***********INIT: CREATED "+toString(nStartingPods)+" PODS");
+    Int num = 0;
+    foreach (x in n){
+      num = num + 1;
+    }
+    println("[Time: "+toString(timeValue(now()))+"] ***********INIT: CREATED "+toString(num)+" PODS");
     this!resize();
   }
 
