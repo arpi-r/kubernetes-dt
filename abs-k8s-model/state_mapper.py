@@ -133,7 +133,11 @@ def create_service_abs(prefix, services, nodes):
         for pod in node['pods']:
             # Rat compUnitSize, Rat monitorCycle, Rat memoryCooldown, Rat cpuRequest, Rat cpuLimit
             # should memory cooldown value be pod['memory'] or will that be used sometime later?
-            service_abs += "\tPodConfig pod" + str(pod_count) + "Config = PodConfig(1, 1, 15, rat(" + pod['cpu'] + "), " + pod['cpu_limit'] + ");\n"
+            # if pod['cpu'] == '0':
+            #     service_abs += "\tPodConfig pod" + str(pod_count) + "Config = PodConfig(1, 1, 15, 0, " + pod['cpu_limit'] + ");\n"
+            # else:
+            #     service_abs += "\tPodConfig pod" + str(pod_count) + "Config = PodConfig(1, 1, 15, rat(" + pod['cpu'] + "), " + pod['cpu_limit'] + ");\n"
+            service_abs += "\tPodConfig pod" + str(pod_count) + "Config = PodConfig(1, 1, 15, rat(64.6), " + pod['cpu_limit'] + ");\n"
             service_abs += "\tpod_config_list = appendright(pod_config_list,pod" + str(pod_count) + "Config);\n"
             # service_abs += "\tService service" + str(service_count) + " = new ServiceObject(service1Config, pod" + str(pod_count) + "Config, policy);\n"
             # service_abs += "\tserviceList = appendright(serviceList, service" + str(service_count) + ");\n"
@@ -166,13 +170,14 @@ def create_requests_abs(prefix):
     final_abs += "\n\tprint(\"INITIAL\");\n"
     final_abs += "\tawait printer!printDT(master, serviceList);\n"
 
-    final_abs += "\tInt perfi = 0;\n"
-    final_abs += "\twhile (perfi < 100) {\n"
+    final_abs += "\tInt perfi = 1;\n"
+    final_abs += "\twhile (perfi <= 100) {\n"
     final_abs += "\t\tprintln(\"RUN: \" + toString(perfi) + \"\\n\");\n"
     final_abs += "\t\tInt ri = 0;\n"
     final_abs += "\t\tList<ServiceTask> service_tasks = list[];\n"
-    final_abs += "\t\twhile (ri < 1000) {\n"
-    final_abs += "\t\t\tRequest request1 = Request(\"request_1\", rat(64.6), rat(29.446), 1);\n"
+    # final_abs += "\t\twhile (ri < (perfi * 10)) {\n"
+    final_abs += "\t\twhile (ri < 10) {\n"
+    final_abs += "\t\t\tRequest request1 = Request(\"request_1\", rat(64.6*float(perfi)), rat(29.446*float(perfi)), 1);\n"
     final_abs += "\t\t\tServiceTask task1 = new ServiceRequest(nth(endpoints,0),request1);\n"
     final_abs += "\t\t\tservice_tasks = appendright(service_tasks,task1);\n"
     final_abs += "\n\t\t\tri = ri + 1;\n\t\t}\n"
@@ -185,9 +190,13 @@ def create_requests_abs(prefix):
 
     final_abs += "\n\t\tforeach (t in rts){\n"
     final_abs += "\t\t\tprintln(\"c1 avg response time:\" + toString(float(t)));\n\t\t}\n"
-    final_abs += "\t\tprintln(\"\\n\\nservice info:\\n\\n\");\n"
-    final_abs += "\t\tawait printer!printService(service1, 1, 1);\n"
-    final_abs += "\n\t\tperfi = perfi + 1;\n\t}\n"
+    final_abs += "\t\tprintln(\"\\nservice info:\\n\");\n"
+    final_abs += "\t\tawait printer!printService(service1, 1, 1, master);\n"
+    # final_abs += "\t\tawait printer!printService(service1, 1, 1);\n"
+    # final_abs += "\t\tprintln(\"\\nnode info:\\n\");\n"
+    # final_abs += "\t\tawait printer!printNodes(master,1,1);\n"
+    final_abs += "\n\t\tperfi = perfi + 1;\n"
+    final_abs += "\n\t\tawait duration(10,10);\n\t}\n"
 
     return final_abs
 

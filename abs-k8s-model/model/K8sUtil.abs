@@ -118,7 +118,9 @@ interface ResourcesMonitor{
     Int time = truncate(timeValue(now())) - 1;
 
     // compute values
-    this.cpuConsumptionRatio = cpu / cpuRequest;
+    if (cpuRequest > 0) {
+      this.cpuConsumptionRatio = cpu / cpuRequest;
+    }
     cpuDisplay = cpu;
 
     // store in map
@@ -325,7 +327,7 @@ interface Printer{
   Unit printServiceStatus(Service s);
 
   Unit printNodes(Master m, Int times, Rat interval);
-  Unit printService(Service s, Int times, Rat interval);
+  Unit printService(Service s, Int times, Rat interval, Master m);
 
   Unit printPods(List<Pod> pods);
 
@@ -384,7 +386,7 @@ class PrinterObject() implements Printer {
     }
   }
 
-  Unit printService(Service s, Int times, Rat interval){
+  Unit printService(Service s, Int times, Rat interval, Master m){
     Int ctr = times;
     while (ctr > 0){
       this.printServiceStatus(s);
@@ -392,6 +394,8 @@ class PrinterObject() implements Printer {
 
       await duration(interval,interval);
     }
+    println("\nnode info:\n");
+    this.printNodes(m, 1, 1);
   }
 
   Unit printPods(List<Pod> pods){
