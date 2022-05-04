@@ -113,7 +113,7 @@ def get_resource_usage(eval=False):
             'nodes': nodes
         }
 
-    with open('./cluster_state.json', 'a+') as f:
+    with open('./eval_4.json', 'a+') as f:
         state = json.dumps(cluster_usage, indent=2)
         f.write(state)
         f.write(',')

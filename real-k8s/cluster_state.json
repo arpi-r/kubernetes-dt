@@ -11,14 +11,14 @@
   "nodes": [
     {
       "name": "real-k8s-control-plane",
-      "cpu": "229832587n",
-      "memory": "801556Ki",
+      "cpu": "232910921n",
+      "memory": "592404Ki",
       "pods": []
     },
     {
       "name": "real-k8s-worker",
-      "cpu": "44930010n",
-      "memory": "263824Ki",
+      "cpu": "55483551n",
+      "memory": "182280Ki",
       "pods": [
         {
           "name": "example1-7497f96b79-58mcg",
@@ -27,7 +27,7 @@
               "name": "nginx",
               "usage": {
                 "cpu": "0",
-                "memory": "14124Ki"
+                "memory": "11188Ki"
               },
               "cpu_limit": "500m"
             }
