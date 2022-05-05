@@ -6,16 +6,16 @@ Running K8sDT.abs...
 
 
 
-[Time: 0] *********** CREATED 1 NODES [CPU: 229832587/1000000 - MEMORY: 801556 ]
-[Time: 0] *********** CREATED 1 NODES [CPU: 4493001/100000 - MEMORY: 263824 ]
+[Time: 0] *********** CREATED 1 NODES [CPU: 232910921/1000000 - MEMORY: 592404 ]
+[Time: 0] *********** CREATED 1 NODES [CPU: 55483551/1000000 - MEMORY: 182280 ]
 [Time: 0] ***********INIT: CREATED 1 PODS
 INITIAL
 
 ----------------------------- DIGITAL TWIN STATUS -----------------------------
-Node: real-k8s-control-plane   Pods: 0   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 0 / 229832587/1000000   Allocated Memory : 0 / 801556
+Node: real-k8s-control-plane   Pods: 0   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 0 / 232910921/1000000   Allocated Memory : 0 / 592404
 
 
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 Pod: example1-7497f96b79-58mcg ID: 0   Cpu: 0   Memory: 0
 
@@ -28,13 +28,13 @@ Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cp
 -----------------------------------------------------------------------------
 RUN: 1
 
-c1 avg response time:8.186680947102117
+c1 avg response time:6.344657306018229
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 147
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 147   Cpu % : 70
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 176
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 176   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -43,32 +43,12 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 16 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 35 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 2
 
-c1 avg response time:5.830202058952094
-
-service info:
-
-SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 176
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 176   Cpu % : 69
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-
-
-node info:
-
-MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 22 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
-
-RUN: 3
-
-c1 avg response time:5.039190625217034
+c1 avg response time:2.502107761067207
 
 service info:
 
@@ -83,18 +63,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
+
+RUN: 3
+
+c1 avg response time:7.1517678508855616
+
+service info:
+
+SERVICE example2 STATUS:
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 353
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 353   Cpu % : 86
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+
+
+node info:
+
+MASTER STATUS:
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 53 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 4
 
-c1 avg response time:12.142467805397214
+c1 avg response time:7.277519504870254
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 117
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 117   Cpu % : 70
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 353
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 353   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -103,58 +103,58 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 53 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 5
 
-c1 avg response time:11.18643706797889
+c1 avg response time:8.465337103720291
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 294
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 294   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 1030
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 1030   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 25 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 202 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 6
 
-c1 avg response time:31.064010230955436
+c1 avg response time:9.210124312745378
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 530
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 530   Cpu % : 69
+TOTAL  CPU: 232  UTIL %: 89 / 10   MEMORY: 1060
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 1060   Cpu % : 359
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 17 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 227 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 7
 
-c1 avg response time:20.514338173385884
+c1 avg response time:25.257299619485817
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 412
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 412   Cpu % : 68
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 824
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 824   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -163,18 +163,18 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 11 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 49 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 8
 
-c1 avg response time:11.533270375407431
+c1 avg response time:19.362091103949272
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 235
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 235   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 471
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 471   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -183,19 +183,19 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 14 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 9
 
-c1 avg response time:50.11030615076066
+c1 avg response time:14.981183373803852
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 530
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 530   Cpu % : 69
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 1325
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 1325   Cpu % : 360
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
@@ -203,59 +203,59 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 26 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 224 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 10
 
-c1 avg response time:16.243618837845528
+c1 avg response time:35.67155110899053
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 588
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 1177
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 1177   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 588   Cpu % : 356
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 24 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 47 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 11
 
-c1 avg response time:58.17214520313643
+c1 avg response time:17.811162991577703
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 971
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 971   Cpu % : 69
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 2267
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 2267   Cpu % : 360
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 31 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 118 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 12
 
-c1 avg response time:19.656074199661266
+c1 avg response time:51.875412217002406
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 2120
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 2120   Cpu % : 354
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 1060
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 1060   Cpu % : 86
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
@@ -263,118 +263,118 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 167 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 44 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 13
 
-c1 avg response time:58.801345110111136
+c1 avg response time:22.495852316035485
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 382
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 382   Cpu % : 70
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 382
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 382   Cpu % : 360
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 6 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 13 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 14
 
-c1 avg response time:25.69189901343708
+c1 avg response time:51.008548158368164
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 1236
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1236
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1236   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 1236   Cpu % : 354
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 80 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 44 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 15
 
-c1 avg response time:45.74363504103365
+c1 avg response time:25.42677363072425
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 441
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 441   Cpu % : 68
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 2650
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 2650   Cpu % : 360
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 12 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 140 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 16
 
-c1 avg response time:27.137674642308006
+c1 avg response time:23.298729957068804
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 2826
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 2826
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 2826   Cpu % : 355
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 2826   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 223 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 218 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 17
 
-c1 avg response time:24.31525759033545
+c1 avg response time:29.730235676406433
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1001
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1001   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 1001
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 1001   Cpu % : 361
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 39 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 35 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 18
 
-c1 avg response time:25.79831123889797
+c1 avg response time:20.996664892755053
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1060
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1060   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1060
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1060   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -383,78 +383,78 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 34 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 50 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 19
 
-c1 avg response time:30.81633520880685
+c1 avg response time:91.47297487571569
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 2797
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 2237
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 2237   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 2797   Cpu % : 356
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 92 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 54 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 20
 
-c1 avg response time:119.69940518866892
+c1 avg response time:34.41955623555618
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 588
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 588   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 2355
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 2355   Cpu % : 360
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 2 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 109 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 21
 
-c1 avg response time:33.11348079059539
+c1 avg response time:50.50459156540555
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 618
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1236
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1236   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 84   Allocated Memory : 0   Cpu % : 131
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 145   Allocated Memory : 618   Cpu % : 224
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 5 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 44 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 22
 
-c1 avg response time:31.748614395375316
+c1 avg response time:66.18325186330722
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 647
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 647   Cpu % : 69
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 1295
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 1295   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -463,38 +463,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 11 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 4 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 23
 
-c1 avg response time:33.25644397692185
+c1 avg response time:39.81131105913365
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 2709
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 3386
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 136   Allocated Memory : 2709   Cpu % : 211
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 93   Allocated Memory : 0   Cpu % : 144
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 3386   Cpu % : 360
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 148 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 184 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 24
 
-c1 avg response time:70.56648783404371
+c1 avg response time:31.595753182787668
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 706
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 706   Cpu % : 70
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1413
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1413   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -503,78 +503,78 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 1 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 49 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 25
 
-c1 avg response time:40.6297988871282
+c1 avg response time:88.50561693435695
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 89 / 10   MEMORY: 2208
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1472
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1472   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 2208   Cpu % : 356
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 61 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 35 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 26
 
-c1 avg response time:56.75631726087102
+c1 avg response time:38.115425728598446
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 765
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 765   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 5359
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 5359   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 6 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 210 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 27
 
-c1 avg response time:44.15264214278246
+c1 avg response time:49.18703829375336
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 3975
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 795
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 795   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 3975   Cpu % : 355
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 204 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 17 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 28
 
-c1 avg response time:122.33945280269548
+c1 avg response time:66.6020623350837
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 1648
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 1648   Cpu % : 68
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 824
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 824   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -583,58 +583,58 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 24 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 22 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 29
 
-c1 avg response time:45.209570271447674
+c1 avg response time:37.67283720908927
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 3415
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 109   Allocated Memory : 1707   Cpu % : 169
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 120   Allocated Memory : 1707   Cpu % : 186
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 1707
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 1707   Cpu % : 86
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 117 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 29 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 30
 
-c1 avg response time:43.11098280959279
+c1 avg response time:50.776938127937456
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 228  UTIL %: 88 / 10   MEMORY: 4416
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 2650
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 71   Allocated Memory : 0   Cpu % : 111
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 157   Allocated Memory : 4416   Cpu % : 243
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 2650   Cpu % : 360
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 74 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 48 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 31
 
-c1 avg response time:67.49182483475771
+c1 avg response time:40.58074136855318
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2738
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2738   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1825
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1825   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -643,18 +643,18 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 32 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 10 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 32
 
-c1 avg response time:118.41961478417942
+c1 avg response time:56.038499265118716
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 942
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 942   Cpu % : 69
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 1884
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 1884   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -663,138 +663,138 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 2 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 42 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 33
 
-c1 avg response time:58.57695361238899
+c1 avg response time:45.90284164602166
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 3886
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1943
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1943   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 3886   Cpu % : 355
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 173 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 46 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 34
 
-c1 avg response time:99.94042099020079
+c1 avg response time:54.11246743812413
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1001
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1001   Cpu % : 70
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 2002
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 2002   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 24 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 70 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 35
 
-c1 avg response time:57.72923776137411
+c1 avg response time:62.29446571677852
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 1030
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1030
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1030   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 1030   Cpu % : 356
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 86 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 14 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 36
 
-c1 avg response time:78.74242485628008
+c1 avg response time:56.4661315785064
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 1060
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 1060   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 5300
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 5300   Cpu % : 360
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 12 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 197 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 37
 
-c1 avg response time:64.60545740643543
+c1 avg response time:88.85888367182208
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 6537
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 2179
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 2179   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 6537   Cpu % : 354
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 229 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 17 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 38
 
-c1 avg response time:54.640951744395004
+c1 avg response time:64.33858012100691
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 1118
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 1118   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 2237
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 2237   Cpu % : 361
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 12 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 92 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 39
 
-c1 avg response time:201.406284028402
+c1 avg response time:115.91405684254082
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 3445
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 3445   Cpu % : 68
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1148
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1148   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -803,59 +803,59 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 23 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 2 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 40
 
-c1 avg response time:86.57147153889318
+c1 avg response time:56.31495669540141
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 2355
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 2355   Cpu % : 68
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 8244
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 115   Allocated Memory : 5889   Cpu % : 178
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 118   Allocated Memory : 2355   Cpu % : 182
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 24 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 219 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 41
 
-c1 avg response time:65.19949583034517
+c1 avg response time:96.60716026857018
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 3621
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 3621
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 3621   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 3621   Cpu % : 355
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 55 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 52 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 42
 
-c1 avg response time:121.52690149200981
+c1 avg response time:64.29999503052755
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2473
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2473   Cpu % : 69
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 4946
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 4946   Cpu % : 361
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
@@ -863,38 +863,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 24 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 114 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 43
 
-c1 avg response time:67.36050671021803
+c1 avg response time:69.26609242040578
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 7597
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 5064
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 111   Allocated Memory : 5064   Cpu % : 171
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 118   Allocated Memory : 2532   Cpu % : 183
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 5064   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 198 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 61 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 44
 
-c1 avg response time:226.53712186834088
+c1 avg response time:56.512703391774686
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2591
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2591   Cpu % : 70
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 2591
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 2591   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -903,38 +903,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 37 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 25 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 45
 
-c1 avg response time:64.20848826311378
+c1 avg response time:159.25986464971274
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 228  UTIL %: 88 / 10   MEMORY: 6625
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 112   Allocated Memory : 3975   Cpu % : 174
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 115   Allocated Memory : 2650   Cpu % : 179
+TOTAL  CPU: 54  UTIL %: 21 / 10   MEMORY: 1325
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 54   Allocated Memory : 1325   Cpu % : 85
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 111 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 20 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 46
 
-c1 avg response time:235.00992624029445
+c1 avg response time:58.665061594863694
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2709
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2709   Cpu % : 69
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 1354
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 1354   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -943,78 +943,78 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 43 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 6 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 47
 
-c1 avg response time:80.85847984527362
+c1 avg response time:82.09182238494296
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 2767
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 2767
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 2767   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 2767   Cpu % : 355
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 24 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 9 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 48
 
-c1 avg response time:247.86995409649717
+c1 avg response time:68.8139587210497
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1413
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1413   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 7067
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 7067   Cpu % : 361
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 4 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 190 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 49
 
-c1 avg response time:75.56906183488276
+c1 avg response time:85.79348384354418
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 7214
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1442
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1442   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 116   Allocated Memory : 4328   Cpu % : 180
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 113   Allocated Memory : 2885   Cpu % : 176
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 166 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 8 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 50
 
-c1 avg response time:187.13472335842908
+c1 avg response time:65.15213894674297
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1472
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1472   Cpu % : 69
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 2944
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 2944   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1023,38 +1023,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 20 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 23 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 51
 
-c1 avg response time:80.89282797279654
+c1 avg response time:80.0666593260449
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 3003
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 6006
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 3003   Cpu % : 355
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 6006   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 79 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 105 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 52
 
-c1 avg response time:305.05987237997175
+c1 avg response time:214.87902020951233
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 1531
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 1531   Cpu % : 68
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 4593
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 4593   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1063,38 +1063,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 5 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 44 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 53
 
-c1 avg response time:90.43751604315786
+c1 avg response time:80.75311975317099
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 9363
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 4681
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 9363   Cpu % : 356
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 4681   Cpu % : 361
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 222 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 69 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 54
 
-c1 avg response time:282.4430282438048
+c1 avg response time:67.44807326883274
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1590
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1590   Cpu % : 69
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 3180
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 3180   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1103,38 +1103,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 21 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 41 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 55
 
-c1 avg response time:94.03423163614804
+c1 avg response time:78.05818691472561
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 89 / 10   MEMORY: 6478
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 6478
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 6478   Cpu % : 356
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 120   Allocated Memory : 1619   Cpu % : 187
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 111   Allocated Memory : 4858   Cpu % : 173
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 135 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 127 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 56
 
-c1 avg response time:80.88276334829364
+c1 avg response time:131.39327284936294
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1648
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1648   Cpu % : 70
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 4946
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 4946   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1143,18 +1143,18 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 1 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 44 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 57
 
-c1 avg response time:82.07156266888357
+c1 avg response time:101.46037360751197
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1678
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1678   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1678
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1678   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1163,58 +1163,58 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 40 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 5 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 58
 
-c1 avg response time:170.30102630271466
+c1 avg response time:92.81817711686713
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 1707
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 1707   Cpu % : 69
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 10247
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 10247   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 25 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 202 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 59
 
-c1 avg response time:94.17080004460733
+c1 avg response time:89.70041813193605
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 6949
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 8686
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 6949   Cpu % : 354
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 8686   Cpu % : 361
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 191 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 64 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 60
 
-c1 avg response time:222.537744516716
+c1 avg response time:141.8255670465273
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1766
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1766   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 3533
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 3533   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1223,19 +1223,19 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 15 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 24 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 61
 
-c1 avg response time:93.53940949430715
+c1 avg response time:216.6538631221285
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 5388
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 5388   Cpu % : 356
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1796
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1796   Cpu % : 85
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
@@ -1243,58 +1243,58 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 104 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 7 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 62
 
-c1 avg response time:99.70128582496683
+c1 avg response time:96.29797776070997
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 7302
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 7302
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 7302   Cpu % : 355
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 7302   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 61 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 224 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 63
 
-c1 avg response time:86.60134749880926
+c1 avg response time:79.12968717670202
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 5565
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 1855
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 1855   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 116   Allocated Memory : 3710   Cpu % : 180
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 112   Allocated Memory : 1855   Cpu % : 174
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 84 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 39 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 64
 
-c1 avg response time:91.9012379134253
+c1 avg response time:228.405711138887
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 1884
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 1884   Cpu % : 68
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 3769
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 3769   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1303,78 +1303,78 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 1 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 5 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 65
 
-c1 avg response time:382.2929899270812
+c1 avg response time:106.84290776392956
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 1913
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 1913   Cpu % : 69
+TOTAL  CPU: 232  UTIL %: 89 / 10   MEMORY: 1913
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 1913   Cpu % : 359
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 29 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 66 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 66
 
-c1 avg response time:103.72446693250374
+c1 avg response time:195.3262696775245
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 3886
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 1943
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 1943   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 3886   Cpu % : 356
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 220 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 12 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 67
 
-c1 avg response time:146.0850611411182
+c1 avg response time:104.16692712030682
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 3945
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 3945   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 7891
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 7891   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 44 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 193 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 68
 
-c1 avg response time:245.88771253536547
+c1 avg response time:281.80241205293134
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 2002
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 2002   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 2002
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 2002   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1383,18 +1383,18 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 38 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 11 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 69
 
-c1 avg response time:99.80786655088733
+c1 avg response time:121.7886160171866
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2031
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2031   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 2031
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 2031   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1403,38 +1403,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 18 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 70
 
-c1 avg response time:108.59562504487982
+c1 avg response time:89.11887644125012
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 10306
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 2061
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 2061   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 10306   Cpu % : 356
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 172 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 71
 
-c1 avg response time:364.7040536609359
+c1 avg response time:90.65069405371047
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 6271
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 6271   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 2090
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 2090   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1443,38 +1443,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 26 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 18 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 72
 
-c1 avg response time:120.87504557806352
+c1 avg response time:126.54935895904858
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 6360
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 4240
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 4240   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 6360   Cpu % : 355
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 85 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 27 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 73
 
-c1 avg response time:105.46704854635689
+c1 avg response time:128.5028554441226
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 4299
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 4299   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 4299
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 4299   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1483,18 +1483,18 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 41 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 54 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 74
 
-c1 avg response time:376.5277917688034
+c1 avg response time:94.41348932727163
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 6537
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 6537   Cpu % : 70
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 4358
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 4358   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1503,78 +1503,78 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 34 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 17 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 75
 
-c1 avg response time:126.89834590598115
+c1 avg response time:131.76135794923897
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 6625
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 4416
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 4416   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 6625   Cpu % : 354
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 185 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 53 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 76
 
-c1 avg response time:109.19788681427812
+c1 avg response time:109.04016235110463
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2237
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2237   Cpu % : 70
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 8951
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 8951   Cpu % : 361
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 24 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 166 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 77
 
-c1 avg response time:124.75805589998589
+c1 avg response time:134.80163638410033
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 6802
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 6802
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 6802   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 6802   Cpu % : 356
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 98 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 53 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 78
 
-c1 avg response time:227.6212235824888
+c1 avg response time:104.02493883384794
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2296
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2296   Cpu % : 70
+TOTAL  CPU: 54  UTIL %: 21 / 10   MEMORY: 2296
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 54   Allocated Memory : 2296   Cpu % : 84
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1583,78 +1583,78 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 26 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 35 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 79
 
-c1 avg response time:129.62542337999415
+c1 avg response time:112.09047915433544
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 2326
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 6978
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 2326   Cpu % : 356
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 6978   Cpu % : 361
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 11 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 47 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 80
 
-c1 avg response time:237.1890027471239
+c1 avg response time:127.60549172323152
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2355
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2355   Cpu % : 69
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 11778
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 11778   Cpu % : 360
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 4 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 206 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 81
 
-c1 avg response time:131.09153641228227
+c1 avg response time:237.74174101805045
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 7155
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 4770
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 4770   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 7155   Cpu % : 355
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 154 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 30 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 82
 
-c1 avg response time:237.66470476890547
+c1 avg response time:100.2865266550065
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 4829
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 4829   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 4829
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 4829   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1663,138 +1663,138 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 26 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 52 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 83
 
-c1 avg response time:133.39007450764092
+c1 avg response time:145.27470828819546
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 230  UTIL %: 89 / 10   MEMORY: 7332
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 7332
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 7332   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 230   Allocated Memory : 7332   Cpu % : 356
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 67 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 50 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 84
 
-c1 avg response time:244.6492389116417
+c1 avg response time:144.18681049615543
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 2473
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 2473   Cpu % : 68
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 7420
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 7420   Cpu % : 360
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 4 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 228 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 85
 
-c1 avg response time:131.50733098346996
+c1 avg response time:105.40457861553783
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 89 / 10   MEMORY: 10011
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 116   Allocated Memory : 2502   Cpu % : 181
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 113   Allocated Memory : 7508   Cpu % : 174
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 5005
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 5005   Cpu % : 86
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 209 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 51 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 86
 
-c1 avg response time:376.80841189178807
+c1 avg response time:121.36691956018348
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2532
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2532   Cpu % : 69
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 10129
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 10129   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 40 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 157 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 87
 
-c1 avg response time:125.18610063415102
+c1 avg response time:110.33049048142668
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2561
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2561   Cpu % : 69
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 10247
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 76   Allocated Memory : 2561   Cpu % : 118
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 78   Allocated Memory : 5123   Cpu % : 120
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 78   Allocated Memory : 2561   Cpu % : 121
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 7 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 40 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 88
 
-c1 avg response time:128.74911170244323
+c1 avg response time:117.19072734729542
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 7773
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 54  UTIL %: 21 / 10   MEMORY: 2591
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 54   Allocated Memory : 2591   Cpu % : 84
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 7773   Cpu % : 355
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 140 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 50 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 89
 
-c1 avg response time:129.61550881002717
+c1 avg response time:369.8447085218105
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 2620
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 2620   Cpu % : 68
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 5241
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 5241   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1803,19 +1803,19 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 41 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 20 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 90
 
-c1 avg response time:464.11168903767935
+c1 avg response time:143.87395981289296
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 44  UTIL %: 17 / 10   MEMORY: 2650
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 44   Allocated Memory : 2650   Cpu % : 69
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 10600
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 232   Allocated Memory : 10600   Cpu % : 360
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
@@ -1823,38 +1823,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 36 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 145 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 91
 
-c1 avg response time:139.30755177921543
+c1 avg response time:128.1230560602619
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 16077
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 10718
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 114   Allocated Memory : 8038   Cpu % : 177
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 114   Allocated Memory : 8038   Cpu % : 177
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 117   Allocated Memory : 2679   Cpu % : 181
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 115   Allocated Memory : 8038   Cpu % : 178
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 178 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 92 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 92
 
-c1 avg response time:401.37117301773327
+c1 avg response time:107.42308203029714
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2709
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2709   Cpu % : 69
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 2709
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 2709   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1863,38 +1863,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 29 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 12 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 93
 
-c1 avg response time:142.21458711431316
+c1 avg response time:146.43245417894545
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 8215
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 13692
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 113   Allocated Memory : 8215   Cpu % : 176
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 115   Allocated Memory : 0   Cpu % : 178
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 13692   Cpu % : 361
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 91 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 219 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 94
 
-c1 avg response time:203.4429605473174
+c1 avg response time:115.16122998901655
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 5535
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 5535   Cpu % : 69
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 2767
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 2767   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1903,18 +1903,18 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 20 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 49 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 95
 
-c1 avg response time:412.6275296536578
+c1 avg response time:119.7518263505274
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 5594
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 5594   Cpu % : 69
+TOTAL  CPU: 54  UTIL %: 21 / 10   MEMORY: 2797
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 54   Allocated Memory : 2797   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1923,38 +1923,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 24 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 12 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 96
 
-c1 avg response time:149.33058702024312
+c1 avg response time:159.31712954474247
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 11307
+TOTAL  CPU: 233  UTIL %: 90 / 10   MEMORY: 5653
 Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 11307   Cpu % : 355
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 233   Allocated Memory : 5653   Cpu % : 360
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 191 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 61 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 97
 
-c1 avg response time:209.88866464477488
+c1 avg response time:123.32983727902163
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 8568
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 8568   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 5712
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 5712   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -1963,58 +1963,38 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 17 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 48 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 98
 
-c1 avg response time:152.96445357078497
+c1 avg response time:290.90163276908396
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 2885
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+TOTAL  CPU: 56  UTIL %: 21 / 10   MEMORY: 5771
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 56   Allocated Memory : 5771   Cpu % : 86
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 2885   Cpu % : 354
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 
 
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 104 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 28 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
 RUN: 99
 
-c1 avg response time:158.18966963452095
+c1 avg response time:293.6243190409871
 
 service info:
 
 SERVICE example2 STATUS:
-TOTAL  CPU: 229  UTIL %: 88 / 10   MEMORY: 2915
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
-Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 229   Allocated Memory : 2915   Cpu % : 355
-
-
-node info:
-
-MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 60 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
-
-RUN: 100
-
-c1 avg response time:143.8264969953537
-
-service info:
-
-SERVICE example2 STATUS:
-TOTAL  CPU: 45  UTIL %: 17 / 10   MEMORY: 2944
-Pod: 0   Node : real-k8s-worker   Cpu Consumption: 45   Allocated Memory : 2944   Cpu % : 69
+TOTAL  CPU: 55  UTIL %: 21 / 10   MEMORY: 2915
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 55   Allocated Memory : 2915   Cpu % : 85
 Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
 Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
@@ -2023,6 +2003,26 @@ Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory :
 node info:
 
 MASTER STATUS:
-Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 229832587/1000000   Requested Cpu : 969/5 / 229832587/1000000   Allocated Memory : 0 / 801556
-Node: real-k8s-worker   Pods: 1   Cpu Load : 25 / 4493001/100000   Requested Cpu : 323/5 / 4493001/100000   Allocated Memory : 0 / 263824
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 0 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 18 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
+
+RUN: 100
+
+c1 avg response time:150.1327860102015
+
+service info:
+
+SERVICE example2 STATUS:
+TOTAL  CPU: 232  UTIL %: 90 / 10   MEMORY: 8833
+Pod: 0   Node : real-k8s-worker   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 1   Node : real-k8s-control-plane   Cpu Consumption: 0   Allocated Memory : 0   Cpu % : 0
+Pod: 2   Node : real-k8s-control-plane   Cpu Consumption: 118   Allocated Memory : 2944   Cpu % : 184
+Pod: 3   Node : real-k8s-control-plane   Cpu Consumption: 113   Allocated Memory : 5889   Cpu % : 176
+
+
+node info:
+
+MASTER STATUS:
+Node: real-k8s-control-plane   Pods: 3   Cpu Load : 83 / 232910921/1000000   Requested Cpu : 969/5 / 232910921/1000000   Allocated Memory : 0 / 592404
+Node: real-k8s-worker   Pods: 1   Cpu Load : 0 / 55483551/1000000   Requested Cpu : 323/5 / 55483551/1000000   Allocated Memory : 0 / 182280
 
