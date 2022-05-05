@@ -4,22 +4,25 @@ import sys
 import matplotlib.pyplot as plt
 from state_extractor import *
 
+
 def convert_cpu(cpu):
     if cpu == "0":
         return 0
     return float(cpu[:-1])
+
 
 def convert_memory(memory):
     if memory == "0":
         return 0
     return float(memory[:-2])
 
+
 def load_and_compare(act_file, twin_file):
     with open(act_file, 'r') as f:
         act_data = json.load(f)
     with open(twin_file, 'r') as f:
         twin_data = json.load(f)
-    
+
     pods_diffs = []
     node_cpu_diffs = []
     node_mem_diffs = []
@@ -53,7 +56,8 @@ def load_and_compare(act_file, twin_file):
         actual_pods_mem = 0
 
         for node in current_act_data['nodes']:
-            twin_node = next(x for x in current_twin_data['nodes'] if x["name"] == node["name"])            
+            twin_node = next(
+                x for x in current_twin_data['nodes'] if x["name"] == node["name"])
 
             actual_node_cpu += convert_cpu(node["cpu"])
             twin_node_cpu += convert_cpu(twin_node["cpu"])
@@ -69,12 +73,14 @@ def load_and_compare(act_file, twin_file):
             for pod in node["pods"]:
                 for container in pod["containers"]:
                     actual_pods_cpu += convert_cpu(container["usage"]["cpu"])
-                    actual_pods_mem += convert_memory(container["usage"]["memory"])
-            
+                    actual_pods_mem += convert_memory(
+                        container["usage"]["memory"])
+
             for pod in twin_node["pods"]:
                 for container in pod["containers"]:
                     twin_pods_cpu += convert_cpu(container["usage"]["cpu"])
-                    twin_pods_memory += convert_memory(container["usage"]["memory"])
+                    twin_pods_memory += convert_memory(
+                        container["usage"]["memory"])
 
         node_cpu_diffs.append(abs(actual_node_cpu - twin_node_cpu))
         node_mem_diffs.append(abs(actual_node_mem - twin_node_mem))
@@ -93,7 +99,7 @@ def load_and_compare(act_file, twin_file):
 
         twin_pod_cpus.append(twin_pods_cpu)
         actual_pod_cpus.append(actual_pods_cpu)
-                
+
         twin_pod_mems.append(twin_pods_memory)
         actual_pod_mems.append(actual_pods_mem)
 
@@ -111,43 +117,46 @@ def load_and_compare(act_file, twin_file):
     # print("Actual node mems: {}".format(actual_node_mems))
 
     fig, axs = plt.subplots(2, 3)
-    axs[0, 0].plot(actual_node_cpus, label = 'Actual Node CPU')
-    axs[0, 0].plot(twin_node_cpus, label = 'Twin Node CPU')
+    axs[0, 0].plot(actual_node_cpus, label='Actual Node CPU')
+    axs[0, 0].plot(twin_node_cpus, label='Twin Node CPU')
     axs[0, 0].set_title('Node CPU Usage')
     axs[0, 0].legend()
-    
-    axs[0, 1].plot(actual_node_mems, label = 'Actual Node Memory')
-    axs[0, 1].plot(twin_node_mems, label = 'Twin Node Memory')
+
+    axs[0, 1].plot(actual_node_mems, label='Actual Node Memory')
+    axs[0, 1].plot(twin_node_mems, label='Twin Node Memory')
     axs[0, 1].set_title('Node Memory Usage')
     axs[0, 1].legend()
 
-    axs[0, 2].plot(actual_pod_mems, label = 'Actual Pod Memory')
-    axs[0, 2].plot(twin_pod_mems, label = 'Twin Pod Memory')
+    axs[0, 2].plot(actual_pod_mems, label='Actual Pod Memory')
+    axs[0, 2].plot(twin_pod_mems, label='Twin Pod Memory')
     axs[0, 2].set_title('Pod Memory Usage')
     axs[0, 2].legend()
 
-    axs[1, 0].plot(actual_pod_cpus, label = 'Actual Pod CPU')
-    axs[1, 0].plot(twin_pod_cpus, label = 'Twin Pod CPU')
+    axs[1, 0].plot(actual_pod_cpus, label='Actual Pod CPU')
+    axs[1, 0].plot(twin_pod_cpus, label='Twin Pod CPU')
     axs[1, 0].set_title('Pod CPU Usage')
     axs[1, 0].legend()
 
-    axs[1, 1].plot(actual_pod_count, label = 'Actual Pod Count')
-    axs[1, 1].plot(twin_pod_count, label = 'Twin Pod Count')
+    axs[1, 1].plot(actual_pod_count, label='Actual Pod Count')
+    axs[1, 1].plot(twin_pod_count, label='Twin Pod Count')
     axs[1, 1].set_title('Pod Count')
     axs[1, 1].legend()
 
     fig.delaxes(axs[1, 2])
 
+    for x in range(2):
+        for y in range(3):
+            bottom, top = axs[x, y].get_ylim()
+            axs[x, y].set_ylim(bottom, top * 4)
+
     plt.show()
 
-        
 
 if __name__ == '__main__':
     actual_eval_file = sys.argv[1]
     twin_eval_file = sys.argv[2]
 
     load_and_compare(actual_eval_file, twin_eval_file)
-
 
 
 # 1. Node count
