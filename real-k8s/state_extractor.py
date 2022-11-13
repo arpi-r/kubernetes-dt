@@ -7,7 +7,7 @@ from kubernetes import client, config
 def connect_to_cluster():
     # Configs can be set in Configuration class directly or using helper utility
     contexts, active_context = config.list_kube_config_contexts(
-        '/home/deepti/.kube/config')
+        '~/.kube/config')
     if not contexts:
         print("Cannot find any context in kube-config file.")
     contexts = [context['name'] for context in contexts]
@@ -113,7 +113,7 @@ def get_resource_usage(eval=False):
             'nodes': nodes
         }
 
-    with open('./eval_4.json', 'a+') as f:
+    with open('./new_evaluations/test.json', 'a+') as f:
         state = json.dumps(cluster_usage, indent=2)
         f.write(state)
         f.write(',')
