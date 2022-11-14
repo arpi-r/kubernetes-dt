@@ -114,7 +114,7 @@ def get_resource_usage(attacks, eval=False):
             'nodes': nodes
         }
 
-    with open('./new_evaluations/test.json', 'a+') as f:
+    with open('./new_evaluations/test_attack.json', 'a+') as f:
         state = json.dumps(cluster_usage, indent=2)
         f.write(state)
         f.write(',')
