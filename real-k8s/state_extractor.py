@@ -93,7 +93,7 @@ def map_nodes_to_pods(pods, nodes):
                     node['pods'].append(pod_on_node)
 
 
-def get_resource_usage(eval=False):
+def get_resource_usage(attacks, eval=False):
     api = client.CustomObjectsApi()
     pods = get_pods_usage(api)
     nodes = get_nodes_usage(api)
@@ -105,6 +105,7 @@ def get_resource_usage(eval=False):
 
     if eval:
         cluster_usage = {
+            'attacks': attacks,
             'nodes': nodes
         }
     else:
