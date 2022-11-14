@@ -194,43 +194,93 @@ def get_new_cluster_resource_usage(new_cluster):
 
 def num_pods_diff(twin_num_pods, new_cluster_num_pods):
     diff = []
+    max_diff, min_diff = -1, 1000
+    max_diff_index, min_diff_index = -1, -1
+
     for i in range(len(twin_num_pods)):
-        diff.append(abs(twin_num_pods[i] - new_cluster_num_pods[i]))
+        d = abs(twin_num_pods[i] - new_cluster_num_pods[i])
+        diff.append(d)
+        if d > max_diff:
+            max_diff = d
+            max_diff_index = i
+        if d < min_diff:
+            min_diff = d
+            min_diff_index = i
     
     # print(diff)
-    return min(diff), max(diff)
+    return min(diff), max(diff), min_diff_index, max_diff_index
 
 def total_node_cpu_usage_diff(twin_total_node_cpu_usage, new_cluster_total_node_cpu_usage):
     diff = []
+    max_diff, min_diff = -1, 10000000000000
+    max_diff_index, min_diff_index = -1, -1
+
     for i in range(len(twin_total_node_cpu_usage)):
-        diff.append(abs(twin_total_node_cpu_usage[i] - new_cluster_total_node_cpu_usage[i]))
+        d = abs(twin_total_node_cpu_usage[i] - new_cluster_total_node_cpu_usage[i])
+        diff.append(d)
+        if d > max_diff:
+            max_diff = d
+            max_diff_index = i
+        if d < min_diff:
+            min_diff = d
+            min_diff_index = i
     
     # print(diff)
-    return min(diff), max(diff)
+    return min(diff), max(diff), min_diff_index, max_diff_index
 
 def total_node_mem_usage_diff(twin_total_node_mem_usage, new_cluster_total_node_mem_usage):
     diff = []
+    max_diff, min_diff = -1, 10000000000000
+    max_diff_index, min_diff_index = -1, -1
+
     for i in range(len(twin_total_node_mem_usage)):
-        diff.append(abs(twin_total_node_mem_usage[i] - new_cluster_total_node_mem_usage[i]))
+        d = abs(twin_total_node_mem_usage[i] - new_cluster_total_node_mem_usage[i])
+        diff.append(d)
+        if d > max_diff:
+            max_diff = d
+            max_diff_index = i
+        if d < min_diff:
+            min_diff = d
+            min_diff_index = i
     
     # print(diff)
-    return min(diff), max(diff)
+    return min(diff), max(diff), min_diff_index, max_diff_index
 
 def total_pod_cpu_usage_diff(twin_total_pod_cpu_usage, new_cluster_total_pod_cpu_usage):
     diff = []
+    max_diff, min_diff = -1, 10000000000000
+    max_diff_index, min_diff_index = -1, -1
+
     for i in range(len(twin_total_pod_cpu_usage)):
-        diff.append(abs(twin_total_pod_cpu_usage[i] - new_cluster_total_pod_cpu_usage[i]))
+        d = abs(twin_total_pod_cpu_usage[i] - new_cluster_total_pod_cpu_usage[i])
+        diff.append(d)
+        if d > max_diff:
+            max_diff = d
+            max_diff_index = i
+        if d < min_diff:
+            min_diff = d
+            min_diff_index = i
     
     # print(diff)
-    return min(diff), max(diff)
+    return min(diff), max(diff), min_diff_index, max_diff_index
 
 def total_pod_mem_usage_diff(twin_total_pod_mem_usage, new_cluster_total_pod_mem_usage):
     diff = []
+    max_diff, min_diff = -1, 10000000000000
+    max_diff_index, min_diff_index = -1, -1
+
     for i in range(len(twin_total_pod_mem_usage)):
-        diff.append(abs(twin_total_pod_mem_usage[i] - new_cluster_total_pod_mem_usage[i]))
+        d = abs(twin_total_pod_mem_usage[i] - new_cluster_total_pod_mem_usage[i])
+        diff.append(d)
+        if d > max_diff:
+            max_diff = d
+            max_diff_index = i
+        if d < min_diff:
+            min_diff = d
+            min_diff_index = i
     
     # print(diff)
-    return min(diff), max(diff)
+    return min(diff), max(diff), min_diff_index, max_diff_index
 
 def check_for_signature_based_attacks(new_cluster):
     global security_logs
@@ -265,40 +315,57 @@ def check_for_anomalies(new_cluster):
     new_num_pods, new_node_cpu_usage, new_node_mem_usage, new_pod_cpu_usage, new_pod_mem_usage = get_new_cluster_resource_usage(new_cluster)
 
     # compare the two
-    min_pod_diff, max_pod_diff = num_pods_diff(twin_num_pods, new_num_pods)
-    min_node_cpu_diff, max_node_cpu_diff = total_node_cpu_usage_diff(twin_node_cpu_usage, new_node_cpu_usage)
-    min_node_mem_diff, max_node_mem_diff = total_node_mem_usage_diff(twin_node_mem_usage, new_node_mem_usage)
-    min_pod_cpu_diff, max_pod_cpu_diff = total_pod_cpu_usage_diff(twin_pod_cpu_usage, new_pod_cpu_usage)
-    min_pod_mem_diff, max_pod_mem_diff = total_pod_mem_usage_diff(twin_pod_mem_usage, new_pod_mem_usage)
+    min_pod_diff, max_pod_diff, min_pod_diff_ind, max_pod_diff_ind = num_pods_diff(twin_num_pods, new_num_pods)
+    min_node_cpu_diff, max_node_cpu_diff, min_node_cpu_diff_ind, max_node_cpu_diff_ind = total_node_cpu_usage_diff(twin_node_cpu_usage, new_node_cpu_usage)
+    min_node_mem_diff, max_node_mem_diff, min_node_mem_diff_ind, max_node_mem_diff_ind = total_node_mem_usage_diff(twin_node_mem_usage, new_node_mem_usage)
+    min_pod_cpu_diff, max_pod_cpu_diff, min_pod_cpu_diff_ind, max_pod_cpu_diff_ind = total_pod_cpu_usage_diff(twin_pod_cpu_usage, new_pod_cpu_usage)
+    min_pod_mem_diff, max_pod_mem_diff, min_pod_mem_diff_ind, max_pod_mem_diff_ind = total_pod_mem_usage_diff(twin_pod_mem_usage, new_pod_mem_usage)
 
-    print("pod diff: ", min_pod_diff, max_pod_diff)
-    print("node cpu diff: ", min_node_cpu_diff, max_node_cpu_diff)
-    print("node mem diff: ", min_node_mem_diff, max_node_mem_diff)
-    print("pod cpu diff: ", min_pod_cpu_diff, max_pod_cpu_diff)
-    print("pod mem diff: ", min_pod_mem_diff, max_pod_mem_diff)
+    # print("pod diff: ", min_pod_diff, max_pod_diff)
+    # print("node cpu diff: ", min_node_cpu_diff, max_node_cpu_diff)
+    # print("node mem diff: ", min_node_mem_diff, max_node_mem_diff)
+    # print("pod cpu diff: ", min_pod_cpu_diff, max_pod_cpu_diff)
+    # print("pod mem diff: ", min_pod_mem_diff, max_pod_mem_diff)
+
+    possible_indices = []
 
     if min_pod_diff > 0 or max_pod_diff > 2:
         anomaly_detected = True
         security_logs += "Anomaly detected in number of pods\n"
+        possible_indices.append(max_pod_diff_ind)
+        possible_indices.append(min_pod_diff_ind)
     
     if min_node_cpu_diff > 500000000 or max_node_cpu_diff > 750000000:
         anomaly_detected = True
         security_logs += "Anomaly detected in node cpu usage\n"
+        possible_indices.append(max_node_cpu_diff_ind)
+        possible_indices.append(min_node_cpu_diff_ind)
     
     if min_node_mem_diff > 800000 or max_node_mem_diff > 850000:
         anomaly_detected = True
         security_logs += "Anomaly detected in node memory usage\n"
+        possible_indices.append(max_node_mem_diff_ind)
+        possible_indices.append(min_node_mem_diff_ind)
     
     if min_pod_cpu_diff > 20 or max_pod_cpu_diff > 300000000:
         anomaly_detected = True
         security_logs += "Anomaly detected in pod cpu usage\n"
+        restart_index = min(max_pod_cpu_diff_ind, min_pod_cpu_diff_ind)
+        possible_indices.append(max_pod_cpu_diff_ind)
+        possible_indices.append(min_pod_cpu_diff_ind)
     
     if min_pod_mem_diff > 120 or max_pod_mem_diff > 20000:
         anomaly_detected = True
         security_logs += "Anomaly detected in pod memory usage\n"
+        restart_index = min(max_pod_mem_diff_ind, min_pod_mem_diff_ind)
+        possible_indices.append(max_pod_mem_diff_ind)
+        possible_indices.append(min_pod_mem_diff_ind)
     
-    restart_index = 0
-
+    if anomaly_detected:
+        restart_index = min(possible_indices)
+    
+    # print("restart index: ", restart_index)
+    
     return anomaly_detected
 
 def response_to_attack(new_cluster):
