@@ -374,9 +374,6 @@ def response_to_attack(new_cluster):
     checkpoint_process = subprocess.run(['python3', 'state_saver.py'], stdout=subprocess.PIPE)
     update_cluster_state(new_cluster)
     time.sleep(5)
-    # TODO: Check why this fails to use updated abs file
-    # running state mapper with the new cluster state json works correctly
-    # k8sdt abs file seems to be updated correctly
     generate_run_new_twin_process = subprocess.Popen(['sh', '../abs-k8s-model/state_mapper.sh', '../security/new_cluster_state.json'])
     # print(security_logs)
     # print(restart_index)

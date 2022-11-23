@@ -27,4 +27,4 @@ echo "Running K8sDT.abs... "
 echo ""
 echo ""
 echo ""
-$pwd/../abs-k8s-model/gen/erl/run | tee $pwd/../abs-k8s-model/K8sDT_output.txt
+$pwd/gen/erl/run | tee $pwd/../abs-k8s-model/K8sDT_output.txt
