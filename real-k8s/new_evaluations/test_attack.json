@@ -1,4 +1,5 @@
-{
+[
+  {
   "attacks": {
     "impact_post": "verb    user.username                                          \nupdate  system:serviceaccount:kube-system:deployment-controller    60"
   },
@@ -147,4 +148,5 @@
       ]
     }
   ]
-},
+}
+]

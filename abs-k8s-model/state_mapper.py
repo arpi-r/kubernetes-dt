@@ -1,6 +1,7 @@
 import json
 import os
 import subprocess
+import sys
 
 def read_cluster_state(file_name):
     with open(file_name, 'r') as f:
@@ -217,19 +218,26 @@ def write_k8sdt_abs(file_name, final_abs):
         f.write(final_abs)
     
 
-cluster_state = read_cluster_state('../real-k8s/cluster_state.json')
-nodes_info = extract_nodes_info(cluster_state['nodes'])
-# print()
-# print(nodes_info)
-services_info = extract_service_info(cluster_state['services'], getNumPods(nodes_info))
-# print()
-# print(service)
-prefix = get_prefix_abs('prefix_abs.txt')
-main_abs = create_topo_abs(prefix, nodes_info, services_info[0])
-service_abs = create_service_abs(main_abs, services_info, nodes_info)
-requests_abs = create_requests_abs(service_abs)
-final_abs = create_final_abs(requests_abs)
-# print()
-# print(final_abs)
-write_k8sdt_abs('K8sDT.abs', final_abs)
-# print("DONE")
+if __name__ == '__main__':
+    cluster_file_name = sys.argv[1]
+    print(cluster_file_name)
+    # print('../real-k8s/' + cluster_file_name)
+    cluster_state = read_cluster_state(cluster_file_name)
+    # cluster_state = read_cluster_state('../real-k8s/cluster_state.json')
+    nodes_info = extract_nodes_info(cluster_state['nodes'])
+    # print()
+    # print(nodes_info)
+    services_info = extract_service_info(cluster_state['services'], getNumPods(nodes_info))
+    # print()
+    # print(service)
+    cwd = os.getcwd()
+    prefix = get_prefix_abs(cwd + '/../abs-k8s-model/' + 'prefix_abs.txt')
+    main_abs = create_topo_abs(prefix, nodes_info, services_info[0])
+    service_abs = create_service_abs(main_abs, services_info, nodes_info)
+    requests_abs = create_requests_abs(service_abs)
+    final_abs = create_final_abs(requests_abs)
+    # print()
+    # print(final_abs)
+    write_k8sdt_abs(cwd + '/../abs-k8s-model/' + 'K8sDT.abs', final_abs)
+    # print("DONE")
+
