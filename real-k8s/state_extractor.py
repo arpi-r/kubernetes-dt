@@ -114,7 +114,7 @@ def get_resource_usage(attacks, eval=False):
             'nodes': nodes
         }
 
-    with open('./new_evaluations/ddos.json', 'a+') as f:
+    with open('./new_evaluations/signature/test1.json', 'a+') as f:
         state = json.dumps(cluster_usage, indent=2)
         f.write(state)
         f.write(',')
@@ -122,4 +122,4 @@ def get_resource_usage(attacks, eval=False):
 
 if __name__ == '__main__':
     connect_to_cluster()
-    get_resource_usage()
+    get_resource_usage({})

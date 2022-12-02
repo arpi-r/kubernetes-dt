@@ -1,0 +1,3290 @@
+[{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "209194530n",
+      "memory": "655356Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "46210319n",
+      "memory": "209280Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "209194530n",
+      "memory": "655356Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "46210319n",
+      "memory": "209280Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "209194530n",
+      "memory": "655356Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "46210319n",
+      "memory": "209280Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "209194530n",
+      "memory": "655356Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "46210319n",
+      "memory": "209280Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "209194530n",
+      "memory": "655356Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "46210319n",
+      "memory": "209280Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {},
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    2\n        system:kube-scheduler             2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    4\n        system:kube-scheduler             4"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    6\n        system:kube-scheduler             6"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    6\n        system:kube-scheduler             6"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    6\n        system:kube-scheduler             6"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    6\n        system:kube-scheduler             6"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    6\n        system:kube-scheduler             6"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    6\n        system:kube-scheduler             6"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    6\n        system:kube-scheduler             6"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    8\n        system:kube-scheduler             8"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    8\n        system:kube-scheduler             8"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    8\n        system:kube-scheduler             8"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    8\n        system:kube-scheduler             8"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    8\n        system:kube-scheduler             8"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    8\n        system:kube-scheduler             8"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    8\n        system:kube-scheduler             8"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    10\n        system:kube-scheduler             10"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    10\n        system:kube-scheduler             10"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    10\n        system:kube-scheduler             10"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    10\n        system:kube-scheduler             10"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    10\n        system:kube-scheduler             10"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    10\n        system:kube-scheduler             10"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    12\n        system:kube-scheduler             12"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    12\n        system:kube-scheduler             12"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    12\n        system:kube-scheduler             12"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    12\n        system:kube-scheduler             12"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    12\n        system:kube-scheduler             12"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    12\n        system:kube-scheduler             12"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    14\n        system:kube-scheduler             14"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    14\n        system:kube-scheduler             14"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    14\n        system:kube-scheduler             14"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    14\n        system:kube-scheduler             14"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    14\n        system:kube-scheduler             14"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "204336506n",
+      "memory": "653536Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "41666600n",
+      "memory": "208412Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "10932Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "impact_pre": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    16\n        system:kube-scheduler             16"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "impact_pre": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    16\n        system:kube-scheduler             16"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "impact_pre": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    16\n        system:kube-scheduler             16"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  3\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  3\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    16\n        system:kube-scheduler             16"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  3\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  3\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                 \nupdate  system:kube-controller-manager    16\n        system:kube-scheduler             16"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 18\n        system:kube-scheduler                                          18\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 18\n        system:kube-scheduler                                          18\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 18\n        system:kube-scheduler                                          18\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 18\n        system:kube-scheduler                                          18\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 18\n        system:kube-scheduler                                          18\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 20\n        system:kube-scheduler                                          20\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 20\n        system:kube-scheduler                                          20\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 20\n        system:kube-scheduler                                          20\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:apiserver                                3\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:apiserver                                3\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 20\n        system:kube-scheduler                                          20\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:apiserver                                3\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_pre": "verb   user.username                               \nwatch  system:kube-controller-manager                  6\n       system:apiserver                                3\n       system:serviceaccount:kube-system:kube-proxy    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 22\n        system:kube-scheduler                                          22\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     6\n       system:apiserver                                                                   3\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     6\n       system:apiserver                                                                   3\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 22\n        system:kube-scheduler                                          22\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     6\n       system:apiserver                                                                   3\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     6\n       system:apiserver                                                                   3\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 22\n        system:kube-scheduler                                          22\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     6\n       system:apiserver                                                                   3\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     6\n       system:apiserver                                                                   3\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 22\n        system:kube-scheduler                                          22\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     6\n       system:apiserver                                                                   3\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     6\n       system:apiserver                                                                   3\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 24\n        system:kube-scheduler                                          24\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:apiserver                                                                   6\n       system:kube-controller-manager                                                     6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:apiserver                                                                   6\n       system:kube-controller-manager                                                     6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 24\n        system:kube-scheduler                                          24\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 24\n        system:kube-scheduler                                          24\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 24\n        system:kube-scheduler                                          24\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 26\n        system:kube-scheduler                                          26\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 26\n        system:kube-scheduler                                          26\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 26\n        system:kube-scheduler                                          26\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 26\n        system:kube-scheduler                                          26\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 28\n        system:kube-scheduler                                          28\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 28\n        system:kube-scheduler                                          28\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 28\n        system:kube-scheduler                                          28\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 28\n        system:kube-scheduler                                          28\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 30\n        system:kube-scheduler                                          30\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "310167131n",
+      "memory": "660556Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "74093131n",
+      "memory": "208640Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 30\n        system:kube-scheduler                                          30\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "237644218n",
+      "memory": "669316Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "63733320n",
+      "memory": "209508Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 30\n        system:kube-scheduler                                          30\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "237644218n",
+      "memory": "669316Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "63733320n",
+      "memory": "209508Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 30\n        system:kube-scheduler                                          30\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "237644218n",
+      "memory": "669316Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "63733320n",
+      "memory": "209508Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 32\n        system:kube-scheduler                                          32\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "237644218n",
+      "memory": "669316Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "63733320n",
+      "memory": "209508Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 32\n        system:kube-scheduler                                          32\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "237644218n",
+      "memory": "669316Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "63733320n",
+      "memory": "209508Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "attacks": {
+    "discovery_modify": "verb   user.username                 \nwatch  system:kube-controller-manager    3",
+    "lateral_movement": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_pre": "verb   user.username                                                                  \nwatch  system:kube-controller-manager                                                     9\n       system:apiserver                                                                   6\n       system:serviceaccount:kube-system:kube-proxy                                       3\n       system:serviceaccount:local-path-storage:local-path-provisioner-service-account    3",
+    "impact_post": "verb    user.username                                              \nupdate  system:kube-controller-manager                                 32\n        system:kube-scheduler                                          32\n        system:serviceaccount:kube-system:horizontal-pod-autoscaler     2"
+  },
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "237644218n",
+      "memory": "669316Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "63733320n",
+      "memory": "209508Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "12285055n",
+                "memory": "10928Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}]

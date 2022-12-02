@@ -1,0 +1,39 @@
+{
+  "services": [
+    {
+      "name": "example2",
+      "maxPods": 10,
+      "minPods": 1,
+      "upscaleThreshold": 10,
+      "downscalePeriod": 300
+    }
+  ],
+  "nodes": [
+    {
+      "name": "real-k8s-control-plane",
+      "cpu": "176667630n",
+      "memory": "575036Ki",
+      "pods": []
+    },
+    {
+      "name": "real-k8s-worker",
+      "cpu": "38696140n",
+      "memory": "199736Ki",
+      "pods": [
+        {
+          "name": "example1-84b79c667b-mb495",
+          "containers": [
+            {
+              "name": "nginx",
+              "usage": {
+                "cpu": "0",
+                "memory": "7752Ki"
+              },
+              "cpu_limit": "500m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
